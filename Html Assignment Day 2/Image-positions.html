@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Image Positions</title>
+    <style>
+        .top-right{
+            margin-left: 70%;
+            right: 1%;
+            top: 8px;
+            position: absolute;
+        }
+        .bottom-right{
+            margin-left: 70%;
+            right: 1%;
+            bottom: 8px;
+            position: absolute;
+        }
+        .left-bottom{
+            margin-top: 14%;
+        }
+        .center{
+            margin-left: 40%;
+            margin-top: -29%;
+            align-items: center;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div class="images-right">
+        <img src="logo.jpg" >
+        <img class="top-right" src="logo.jpg">
+        <img class="bottom-right" src="logo.jpg">
+    </div>
+
+    <div class="images-left">
+        <img class="left-bottom" src="logo.jpg">
+    </div>
+
+    <div class="center-image">
+        <img class="center" src="logo.jpg">
+    </div>
+</body>
+</html>

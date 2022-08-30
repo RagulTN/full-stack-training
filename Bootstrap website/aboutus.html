@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <title>Document</title>
+</head>
+<style>
+  body {
+    background-color: white;
+    height: 100%;
+    width: 100%;
+  }
+
+  .navbar ul li a:hover {
+
+    background-color: orangered;
+    width: 100%;
+    transition: 3s;
+    margin: left;
+    display: block;
+  }
+
+  .navbar ul li a:hover::after {
+    width: 100%;
+  }
+
+
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    width: 300px;
+
+    z-index: 1;
+  }
+
+  .dropdown-content a {
+    color: black;
+    text-align: center;
+    background-color: none;
+    line-height: 2em;
+    text-decoration: none;
+    display: block;
+
+  }
+
+
+  .dropdown-content a:hover {
+    background-color: none;
+    display: none;
+    text-align: center;
+    text-decoration: none;
+
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: list-item;
+    text-align: center;
+
+  }
+
+  .shape_slow {
+    width: 120px;
+    z-index: -1;
+    margin-left: -50px;
+    margin-top: -50px;
+  }
+
+  .shape_slow2 {
+    width: 150px;
+    z-index: -1;
+    margin-top: -135%;
+    margin-left: 60%;
+  }
+  
+ 
+
+ 
+</style>
+
+<body>
+  <nav class="navbar">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <img src="logo.jpg" style="width: 50px;height:50px;margin-left: -300px;margin-top: 65px;">
+        <a class="navbar-brand" href="home.html"
+          style="font-family: Arial Black;color: rgb(23, 3, 104);padding: 70px;margin-left: 30px;font-size: x-large;margin-top: 10px;;">Brimma Tech</a>
+      </div>
+      <ul class="nav navbar-nav navbar-right"
+        style=" padding: 66px; display:flex;margin-left: 40px;margin-right: 40px;font-size: x-large;">
+        <li class="active"><a href="home.html" style="color: rgb(74, 72, 72);">Home</a></li>
+        <li class="dropdown">
+          <a href="aboutus.html" style="color: rgb(74, 72, 72);">AboutUs</a>
+          <div class="dropdown-content">
+            <a href="#">Overview</a>
+            <a href="#">Our Values</a>
+            <a href="#">Our Mission</a>
+            <a href="#">Our Approach</a>
+            <a href="#">Leadership Team</a>
+            <a href="#">Awards</a>
+
+          </div>
+        </li>
+        <li><a href="services.html" style="color: rgb(74, 72, 72);">Services</a></li>
+        <li><a href="career.html" style="color: rgb(74, 72, 72);">Career</a></li>
+        <li><a href="Contact.html" style="color: rgb(74, 72, 72);">Contact</a></li>
+      </ul>
+    </div>
+
+    <section>
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="img" style="margin-left: 5%;">
+            <img src="about_main_img.png" style="transform: translate3d(0px, 0px,0px);opacity: 1;">
+            <li class="top">
+              <img class="shape_slow" src="imglinebox.svg" alt="about image squire">
+            </li>
+          </div>
+
+
+        </div>
+        <div class="col-sm-6">
+          <div class="text" style="margin-left: 15%;">
+            <h4>About Us</h4><br>
+            <h4>
+              <p style="font-size:x-large;line-height: 2em;">Zapare Technologies works with Hospitals, Physician<br>
+                groups, Financial institutions, Clearing houses and <br>
+                Billing agencies to streamline, scale and improve their <br>
+                healthcare payment processing by efficiently <br>
+                deploying an array of intelligent technologies, staffing<br>
+                and business process management solutions</p>
+            </h4>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <section>
+      <div class="con">
+        <h1 style="text-align: center;font-family: Arial black;color: navy;">Leadership Team</h1>
+        <p  style="text-align: center;font-family:Rubik;font-size:xx-large;"  >A dynamic and creative leadership team with over 20 combined years of experience managing largescale<br>
+          operations, diverse consulting assignments and implementing innovative business solutions for their clients
+        </p>
+      </div>
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="but">
+            <div class="panel-group"
+                style="background-color:whitesmoke;color: navy;width: 80%;height: 100px;margin-left: 10%;font-size: x-large;text-align: left;border-radius: 20px;">
+
+                <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo" 
+                    style="background-color:whitesmoke;color: navy;width: 100%;height: 300px;margin-left: 0%;font-size: x-large;text-align: left;border-radius: 20px;"> <img src="arnold.png" style="width:300px ;">
+                     </button>
+                <div id="demo" class="collapse">
+                    <div class="panel-body">
+                        <p style="color:rgb(74, 72, 72);z-index: -1;">He rose to fame as the world's top bodybuilder, launching a career that would make him a giant Hollywood star via films like Conan the Barbarian, The Terminator and Total Recall. After years of blockbuster movie roles, Schwarzenegger went into politics, becoming governor of California in 2003.</p>
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+        </div>
+      </div>
+
+    </section>
+
+  </nav>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript exercises</title>
+    <script>
+        function confirmIt(){
+        var r = confirm("Are you sure want to submit?");
+        if (r == true){
+            alert('Submitted sucessfully');
+        } else {
+            alert('Process cancelled');
+        }
+        }
+
+        function focusFunction() {
+        document.getElementById("myInput").style.background = "yellow";
+        }
+
+        function blurFunction() {
+        document.getElementById("myInput").style.background = "white";
+        }
+
+        const input = document.querySelector('input')
+        input.onkeydown = (e) => {
+        if (e.keyCode === 13) {
+            e.preventDefault()
+            confirmIt();
+        }
+        };
+    </script>
+</head>
+<body>
+    <h3>Change Background Color of Textbox</h3>
+    Enter your name:
+    <input type="text" id="myInput" onfocus="focusFunction()" onblur="blurFunction()">
+    <input type="button" name="button" value="Submit" onClick="confirmIt()" >
+</body></html>

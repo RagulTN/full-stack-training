@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rest Example</title>
+</head>
+  <style>
+    table{
+      font-family:Arial, Helvetica, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+      border-radius: 1%;
+    }
+    td,th{
+        border: 1px solid black;
+        text-align: left;
+        padding: 8px;
+    }
+    th{
+        background-color: gold;
+    }
+
+    tr:nth-child(even){
+        background-color: wheat;
+    }
+  </style>
+<body>
+  <h2> Html Table</h2>
+
+  <table id="table">
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Role</th>
+    </tr>
+
+  </table>
+
+  <script>
+
+        fetch("https://fundshop-api.herokuapp.com/users")
+            .then((data) => data.json())
+            .then((data) => injectToTable(data));
+
+        function injectToTable(data){
+            var allRows = '';
+            var table = document.getElementById("table");
+
+            for (let i = 0; i < data.length; i++) {
+                var nextRow = '<tr> <td>' +data[i]['fname'] +'</td> <td> '+data[i]['email']+ '</td> <td>' + data[i]['role']+'</td> </tr>'
+                table.innerHTML +=nextRow;
+            }
+        }
+  </script>
+</body>
+</html>

@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+   </head>
+   <style>
+      *{
+      justify-content: center;
+      align-items: center;
+      }
+      table
+      {
+      align-items: center;
+      }
+      table ,tr
+      {
+      height: 40px;
+      }
+      .gen
+      {
+      margin-left: 60px;
+      }
+   </style>
+   <body>
+      <h1>APPLICATION FORM</h1>
+      <fieldset style="width: 60%;">
+         <legend>personal  details</legend>
+         <table>
+            <tr>
+               <td colspan="3">
+                  <label>Applicants full name</label>
+                  <select>
+                     <div class="text">
+                        <option> Mr. </option>
+                        <option>Mrs.</option>
+                  </select>
+                  <input type="text" required style="margin-left:2px ;">
+                  </div>
+               </td>
+               <td>
+                  &nbsp; &nbsp;&nbsp;  &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;  &nbsp; &nbsp;&nbsp;
+                  <label>Care Of</label>
+                  <input type="radio" style="margin-left: 50px;">Parents <input type="radio">Guardians
+               </td>
+            </tr>
+            <tr>
+               <td colspan="3">
+                  <div class="text">
+                     <label>Fathers name</label>
+                     <select style="margin-left:50px">
+                        <option >Mr.</option>
+                     </select>
+                     <input type="text" required style="margin-left:5px">
+                  </div>
+               </td>
+               <td>
+                  <div class="text">
+                     &nbsp; &nbsp;&nbsp;  &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;  &nbsp; &nbsp;&nbsp;
+                     <label>Mothers name</label>
+                     <select>
+                        <option>Mrs.</option>
+                     </select>
+                     <input type="text" required style="margin-left: 2px;">
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="3">
+                  <div class="text">
+                     <label>Gender</label>
+                     <input type="radio" style="margin-left: 89px;" >male <input type="radio">female <input type="radio">others 
+                  </div>
+               </td>
+               <td>
+                  &nbsp; &nbsp;&nbsp;  &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;  &nbsp; &nbsp;&nbsp;
+                  <label>DOB</label>
+                  <input type="date" required style="margin-left: 90px;">
+               </td>
+            </tr>
+            <tr>
+               <td colspan="3">
+                  <div class="text">
+                     <label>Marital Status</label>
+                     <select style="margin-left: 60px;">
+                        <option>Married</option>
+                        <option>Unmaried</option>
+                     </select>
+                  </div>
+               </td>
+               <td>
+                  &nbsp; &nbsp;&nbsp;  &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;  &nbsp; &nbsp;&nbsp;
+                  <label>Category</label>
+                  <select style="margin-left:70px">
+                     <option>select</option>
+                  </select>
+               </td>
+            <tr>
+               <td colspan="3">
+                  <div class="text">
+                     <label>Handicapted</label>
+                     <input type="radio" style="margin-left: 60px;">Yes <input type="radio"> No
+                  </div>
+               </td>
+               <td>&nbsp; &nbsp;&nbsp;  &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;  &nbsp; &nbsp;&nbsp;
+                  <label>Ex-serviceman</label>
+                  <input type="radio" style="margin-left: 40px;">Yes <input type="radio">No
+               </td>
+            </tr>
+            </tr>
+         </table>
+      </fieldset>
+      <br>
+      <br>
+      <br>
+      <fieldset style="width: 60%;">
+         <legend>Contact Details</legend>
+         <table>
+            <tr>
+               <td colspan="3">
+                  <label>Mobile Number</label>
+                  <input type="text" required style="margin-left:100px ;">
+                  </div>
+               </td>
+               <td>
+                  &nbsp; &nbsp;&nbsp;  &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;  &nbsp; &nbsp;&nbsp;
+                  <label> Email Id</label>
+                  <input type="email" required style="margin-left: 60px;" >
+               </td>
+            </tr>
+            <tr>
+               <td colspan="3">
+                  <label>Address Line1</label>
+                  <input type="text" required style="margin-left:110px ;">
+                  </div>
+               </td>
+               <td>
+                  &nbsp; &nbsp;&nbsp;  &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;  &nbsp; &nbsp;&nbsp;
+                  <label> Address Line2</label>
+                  <input type="text" required style="margin-left: 18px;" >
+               </td>
+            </tr>
+            <tr>
+               <td colspan="3">
+                  <label>City</label>
+                  <input type="text" required style="margin-left:180px ;">
+                  </div>
+               </td>
+               <td>
+                  &nbsp; &nbsp;&nbsp;  &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;  &nbsp; &nbsp;&nbsp;
+                  <label> State</label>
+                  <select style="margin-left: 180px;">
+                     <option>Tamilnadu</option>
+                     <option>Kerala</option>
+                  </select>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="3">
+                  <label>Pincode</label>
+                  <input type="number" required style="margin-left:160px ;">
+                  </div>
+               </td>
+            </tr>
+         </table>
+      </fieldset>
+      <br>
+      <br>
+      <br>
+      <fieldset style="width: 60%;">
+         <legend>Qualification details</legend>
+         <table class="table3" style="width: 100%;">
+            <tr>
+               <th>Sr No</th>
+               <th>Qualification</th>
+               <th>Board/University</th>
+               <th>Passing Year</th>
+               <th>Max Marks</th>
+               <th>Marks obtain</th>
+               <th>Percentage</th>
+            </tr>
+            <tr>
+               <td>1</td>
+               <td>
+                  <select>
+                     <option>10th</option>
+                     <option>+2</option>
+                     <option>Degree</option>
+                  </select>
+               </td>
+               <td><input type="text" name="" id=""></td>
+               <td><input type="number" name="" id=""></td>
+               <td><input type="number" name="" id=""></td>
+               <td><input type="number" name="" id=""></td>
+               <td><input type="number" name="" id=""></td>
+            </tr>
+            <tr>
+               <td>2</td>
+               <td>
+                  <select>
+                     <option>10th</option>
+                     <option>+2</option>
+                     <option>Degree</option>
+                  </select>
+               </td>
+               <td><input type="text" name="" id=""></td>
+               <td><input type="number" name="" id=""></td>
+               <td><input type="number" name="" id=""></td>
+               <td><input type="number" name="" id=""></td>
+               <td><input type="number" name="" id=""></td>
+            </tr>
+            <tr>
+               <td>2</td>
+               <td>
+                  <select>
+                     <option>10th</option>
+                     <option>+2</option>
+                     <option>Degree</option>
+                  </select>
+               </td>
+               <td><input type="text" name="" id=""></td>
+               <td><input type="number" name="" id=""></td>
+               <td><input type="number" name="" id=""></td>
+               <td><input type="number" name="" id=""></td>
+               <td><input type="number" name="" id=""></td>
+            </tr>
+         </table>
+      </fieldset>
+      <br>
+      <br>
+      <br>
+      <fieldset style="width: 60%;">
+         <legend>Language Knowledge</legend>
+         <table class="table4" style="width: 100%;">
+            <tr>
+               <th>Language</th>
+               <th>Reading</th>
+               <th>Writing</th>
+               <th>Spoken</th>
+            </tr>
+            <tr>
+               <td style="text-align: center;">Hindi</td>
+               <td>
+                  <input type="checkbox" style="align-items: center;">
+               </td>
+               <td>
+                  <input type="checkbox" style="text-align: center;">
+               </td>
+               <td>
+                  <input type="checkbox" style="text-align: center;">
+               </td>
+            </tr>
+            <tr>
+               <td style="text-align: center;">Tamil</td>
+               <td>
+                  <input type="checkbox" style="align-items: center;">
+               </td>
+               <td>
+                  <input type="checkbox" style="text-align: center;">
+               </td>
+               <td>
+                  <input type="checkbox" style="text-align: center;">
+               </td>
+            </tr>
+            <tr>
+               <td style="text-align: center";>English</td>
+               <td>
+                  <input type="checkbox" style="align-items: center;">
+               </td>
+               <td>
+                  <input type="checkbox" style="text-align: center;">
+               </td>
+               <td>
+                  <input type="checkbox" style="text-align: center;">
+               </td>
+            </tr>
+         </table>
+      </fieldset>
+      <fieldset style="width: 60%;">
+         <legend>Identification Details</legend>
+         <table class="table5" style=>
+            <tr>
+               <td>Adhaar Card Number</td>
+               &nbsp;&nbsp;&nbsp;
+               <td><input type="number"></td>
+               <td>Pan Card Number</td>
+               &nbsp;&nbsp;&nbsp;
+               <td><input type="number"></td>
+            </tr>
+            <tr>
+               <td>Upload Photo</td>
+               &nbsp;&nbsp;&nbsp;
+               <td><input type="file"> </td>
+               <td>Upload Signature</td>
+               &nbsp;&nbsp;&nbsp;
+               <td><input type="file"> </td>
+            </tr>
+         </table>
+      </fieldset>
+      <div class="but" style="text-align: center;">
+         <input type="submit" value="Submit">
+         <input type="submit" value="back">
+      </div>
+   </body>
+</html>

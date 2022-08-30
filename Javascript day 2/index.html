@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript exercises</title>
+    <script type="text/javascript" src="index.js"></script>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;  
+            font-family:sans-serif;
+        }
+
+        button{
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 20px;
+        }
+
+        img{
+        height:300px;
+        }
+
+        #demo {  
+        height : 30px;
+        padding: 0.5em;
+        text-align: center;
+        border: 2px solid black;
+        }
+
+        a{
+        text-align:center;
+        margin-left:43%;
+        }
+    </style>
+</head>
+<body onload="onLoad()">
+    <div>
+    <img style="height:300px" src="https://cdn-icons-png.flaticon.com/512/3343/3343850.png" onmouseover="makeImageLaugh(this)" onmouseout="makeImageSmile(this)">
+      <h3> PUMA Shoe </h3>
+    <button  onclick="toggle_div('option');" onmouseout="toggle_div()">Show Info</button>
+    <button class="btns" id="new-tab">See more</button>
+    <br/><br/>
+    <div id="option">  This is PUMA shoe with Price 1200 !!</div>
+    <hr>
+     <h1 id="demo" onmouseover="mouseOver()" onmouseout="mouseOut()">Buy Now</h1>
+    <a href="www.google.com" onclick="return prevent()">Cart</a>
+    
+    </div>
+    <br>
+    <br>
+    <div>
+    
+    <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" border="0" src="https://cdn-icons-png.flaticon.com/512/3343/3343850.png" alt="Image">
+      
+    <img onclick="resize(this)" border="0" src="https://cdn-icons-png.flaticon.com/512/3343/3343850.png" alt="Image">
+    </div>
+    </body>
+</html>

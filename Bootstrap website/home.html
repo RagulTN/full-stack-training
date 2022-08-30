@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Document</title>
+</head>
+<style>
+    body
+    {
+        background-color: white;
+    }
+    .navbar ul li a:hover
+    {
+        
+        background-color: gold;
+        width: 100%;
+        transition: 0.5s;
+        margin: left;
+        display: block;
+    }
+     .navbar ul li a:hover::after{
+      width: 100%;
+     }
+    
+      
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  width:300px;
+  
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  text-align: center;
+  background-color: none;
+  line-height: 2em;
+  text-decoration: none;
+  display: block;
+
+}
+ 
+
+.dropdown-content a:hover {
+  background-color:none;
+  display: none;
+  text-align: center;
+  text-decoration: none;
+  
+}
+
+.dropdown:hover .dropdown-content 
+{
+  display:list-item;
+  text-align: center;
+   
+}
+.footer-container
+{
+  background-color: navy;
+}
+ 
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+.fa:hover {
+    opacity: 0.7;
+}
+.fa-facebook {
+  background:rgb(7, 7, 73);
+  color: white;
+ 
+   
+}
+.fa-linkedin {
+  background:rgb(7, 7, 73);
+  color: white;
+}
+.fa-youtupe {
+   color: white;
+   
+}
+</style>
+<body>
+    <nav class="navbar">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <img src="logo.jpg" style="width: 50px;height:50px;margin-left: -400px;margin-top: 65px;">
+            <a class="navbar-brand" href="home.html" style="font-family: Arial Black;color: rgb(23, 3, 104);padding: 70px;margin-left: 30px;font-size: x-large;margin-top: 10px;;">Brimma Tech</a>
+          </div>
+          <ul class="nav navbar-nav navbar-right" style=" padding: 66px; display:flex;margin-left: 40px;margin-right: 40px;font-size: x-large;">
+            <li class="active"><a href="home.html" style="color: rgb(74, 72, 72);">Home</a></li>
+            <li class="dropdown" >
+              <a href="aboutus.html"  style="color: rgb(74, 72, 72);">AboutUs</a>
+              <div class="dropdown-content">
+                <a href="#">Overview</a>
+                <a href="#">Our Values</a>
+                <a href="#">Our Mission</a>
+                <a href="#">Our Approach</a>
+                <a href="#">Leadership Team</a>
+                <a href="#">Awards</a>
+
+             </div>
+            </li>
+            <li><a href="services.html" style="color: rgb(74, 72, 72);" >Services</a></li>
+            <li><a href="career.html" style="color: rgb(74, 72, 72);">Career</a></li>
+            <li><a href="Contact.html" style="color: rgb(74, 72, 72);">Contact</a></li>
+          </ul>
+        </div>
+     
+      <section>
+        <div class="row">
+            <div class="col-sm-6">
+                   <h1 style="color:navy;font-family: Arial black;" >We Are</h1>
+                   <p style="font-size:xx-large;font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-size: 28px;">A highly specialized Management team with over 20 combined years of experience in 
+                    the Healthcare industry with proven ability to optimally combine digital technology, 
+                    skilled resources and efficient business processes to implement creative as well as proven
+                     market solutions to suit an ever-evolving market. Our forte has been to successfully tailor 
+                     our solutions to support your needs whether it is in the space of Consulting, Product Management
+                      or Service Delivery</p>
+            </div>
+           <div class="col-sm-6">
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                  <li data-target="#myCarousel" data-slide-to="0"  ></li>
+                  <li data-target="#myCarousel" data-slide-to="1"></li>
+                  <li data-target="#myCarousel" data-slide-to="2"></li>
+                </ol>
+            
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                  <div class="item active">
+                    <img src="1.gif" alt="Los Angeles" style="width:100% ;height: 100%;">
+                  </div>
+            
+                  <div class="item">
+                    <img src="2.gif" alt="Chicago" style="width:100%;height: 100%;">
+                  </div>
+                
+                  <div class="item">
+                    <img src="3.gif" alt="New york" style="width:100%;height: 100%;">
+                  </div>
+                </div>
+            
+                <!-- Left and right controls -->
+                <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                  <span class="glyphicon glyphicon-chevron-left"></span>
+                  
+                </a>
+                <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                  <span class="glyphicon glyphicon-chevron-right"></span>
+                  
+                </a>
+              </div>
+           </div>
+        </div>
+       
+      </section>
+       <footer style="background-color:rgb(7, 7, 73);color: #f1f1f1;">
+        <div class="footer container">
+              
+              <br>
+              <br>
+              <h1 style="text-align: center;font-family: Arial black;">Care To Join Us</h1>
+              <br>
+              <br>
+              <h3  style="text-align: center;font-family: Rubik;">Embark on an exciting career with us to learn and grow alongside the best in the industry</h3>
+              <br>
+              <br>
+               <h5  style="text-align: center;">View Current Oppenings</h5>
+               <hr color="yellow" style="width:15% ;padding: 2px;">
+               <br>
+               <br>
+               <hr color="#fff" style="padding: 1px;width:100%;">
+               <ul class="nav navbar-nav navbar-right" style="padding: 66px; display:flex;font-size: x-large;margin-right: 20%;">
+                 <li><a href="home.html">Home</a></li>
+                 <li><a href="aboutus.html">About Us</a></li>
+                 <li><a href="services.html">Services</a></li>
+                 <li><a href="career.html">Career</a></li>
+                 <li><a href="Contact.html">Contact</a></li>
+               </ul>
+               <br>
+               <br>
+                
+        </div>
+        <p style="text-align: center;font-family: Arial black;">Follow Us :<a href="https://www.facebook.com/ZapareTechnologies" class="fa fa-facebook" ></a>
+       
+        <a href="https://www.linkedin.com/company/zapare/" class="fa fa-linkedin" ></a><a href="https://www.youtube.com/watch?v=tnXYl1GLlRI" class="fa fa-youtube"></a></p>
+        
+       </footer>
+    </nav>
+</body>
+</html>

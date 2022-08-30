@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Exercises</title>
+</head>
+<body>
+    <h2 style="text-align:center;"> JavaScript Exercises</h2>
+    <h3>5th question</h3>
+    <p id="5th"></p>
+
+    <h3>6th question</h3>
+    <p id="6th"></p>
+
+    <h3>7th question</h3>
+    <p id="7th"></p>
+
+    <h3>8th question</h3>
+    <p id="8th"></p>
+
+    <h3>9th question</h3>
+    <p id="9th"></p>
+
+    <h3>10th question</h3>
+
+    <script>
+
+        //5TH
+        const lowerNumber = parseInt(prompt('Enter lower number: '));
+        const higherNumber = parseInt(prompt('Enter higher number: '));
+
+        console.log(`The prime numbers between ${lowerNumber} and ${higherNumber} are:`);
+
+        // looping from lowerNumber to higherNumber
+        for (let i = lowerNumber; i <= higherNumber; i++) {
+            let flag = 0;
+
+            // looping through 2 to user input number
+            for (let j = 2; j < i; j++) {
+                if (i % j == 0) {
+                    flag = 1;
+                    break;
+                }
+            }
+
+            // if number greater than 1 and not divisible by other numbers
+            if (i > 1 && flag == 0) {
+                console.log(i);
+                document.getElementById("5th").innerHTML = i;
+            }
+        }
+
+
+        //6TH
+        const totmarks = parseInt(prompt('Enter total marks : '));
+        exam(totmarks);
+
+        function exam(totmarks)
+        {
+        switch(true){
+            case totmarks >= 90:
+                document.getElementById("6th").innerHTML = "A+";
+                break;
+            case totmarks >= 80 && totmarks <90:
+                document.getElementById("6th").innerHTML = "A";
+                break;
+            case totmarks >= 70 && totmarks <80:
+                document.getElementById("6th").innerHTML = "B+";
+                break;
+            case totmarks >= 60 && totmarks <70:
+                document.getElementById("6th").innerHTML = "B+";
+                break;
+            case totmarks >= 50 && totmarks <60:
+                document.getElementById("6th").innerHTML = "you dont have a grade";    
+                break;
+            default:
+                console.log("hello");
+                break;
+        }}
+
+
+        //7TH
+        const num = parseInt(prompt('Enter Number : '));
+        diff(num);
+
+        function diff(num){
+            if(num<=13) 
+                document.getElementById("7th").innerHTML = 13-num; 
+            else
+                document.getElementById("7th").innerHTML = (num-13)*2;
+        }
+
+
+        //8TH
+        const start = ['A', 'B'];
+        const end = ['C', 'D'];
+
+        const combined = start.concat(end);
+        document.getElementById("8th").innerHTML = combined;
+
+
+        //9TH
+        function merge(array1, array2) {
+        var resArr = [];
+        var arr = array1.concat(array2);
+        var len = arr.length;
+        var assoc = {};
+
+        while(len--) {
+            var item = arr[len];
+
+            if(!assoc[item]) 
+            { 
+                resArr.unshift(item);
+                assoc[item] = true;
+            }
+        }
+
+        return resArr;
+    }
+
+
+    var array1 = [1, 2, 3];
+    var array2 = [2, 4, 4];
+    document.getElementById("9th").innerHTML = (merge(array1, array2));
+
+
+    //10TH
+    function sum_of_elements(arr , n)
+	{
+		var sfirst = 0, ssecond = 0;
+
+		for (i = 0; i < n; i++) {
+			if ((i%2)==0)
+			{
+				sfirst += arr[i];
+			}
+			else {
+				ssecond += arr[i];
+			}
+		}
+
+
+		document.write(
+	    "Sum of first half " + sfirst+"<br/>"
+		);
+
+		document.write(
+	    "Sum of second half " + ssecond+"<br/>"
+		);
+	}
+
+    var arr = [ 1,3,6,2,5,10 ];
+    var n = arr.length;1
+    sum_of_elements(arr, n);
+    </script>
+</body>
+</html>

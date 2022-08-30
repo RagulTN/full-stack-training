@@ -1,0 +1,49 @@
+<!DocType html>
+<html>
+    <head>
+    </head>
+    <body>
+        <script type="text/javascript">  
+            function msg(){  
+             alert("Hello Alert Box");  
+            }             
+            
+            function msg1(){  
+                var v= confirm("Are u sure?");  
+                if(v==true){  
+                alert("ok");  
+                }  
+                else{  
+                alert("cancel");  
+                }       
+                  
+                }
+               
+                function msg2(){  
+                var v= prompt("Who are you?");  
+                alert("I am "+v);  
+  
+                    }  
+                  
+
+                    function msg3(){  
+                         open("http://www.Google.com");  
+                    }  
+                    
+                    function msg4(){  
+                            setTimeout(  
+                                function(){  
+                                    alert("Google Page after 2 seconds")  
+                                            },2000);  
+  
+                                                    }  
+                                                    
+        </script> 
+        <input type="button" value="click" onclick="msg()"/>  
+        <input type="button" value="click" onclick="msg1()"/>  
+        <input type="button" value="click" onclick="msg2()"/>  
+        <input type="button" value="click" onclick="msg3()"/>  
+        <input type="button" value="click" onclick="msg4()"/>  
+       
+    </body>
+</html>

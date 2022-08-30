@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <!-- Bootstrap Min CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <!-- MeanMenu CSS -->
+  <link rel="stylesheet" href="css/navbar.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+	*{
+		font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+	}
+	#blink {
+		animation: blinker 1s linear infinite;
+		}
+		@keyframes blinker {
+		50% {
+			opacity: 0;
+		}
+		}
+  </style>
+</head>
+<body>
+
+<div class="navbar-area">
+	<!-- Menu For Mobile Device -->
+	<div class="mobile-nav">
+		<a href="#" class="logo">
+			Logo
+		</a>
+	</div>
+
+	<!-- Menu For Desktop Device -->
+	<div class="main-nav">
+		<div class="container">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsenavbar" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle-navigation">
+			<span class="navbar-toggler-icon"></span>
+			</button>
+			<nav class="navbar navbar-expand-md navbar-light" id="collapsenavabr">
+				<a class="navbar-brand" href="#">
+					<img src="https://cdn-icons-png.flaticon.com/512/476/476863.png" height="50" width="50" alt="Cinque Terre">
+				</a>
+				<div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item">
+							<a href="#" class="nav-link dropdown-toggle active">Home</a>
+							<ul class="dropdown-menu">
+								<li class="nav-item">
+									<a href="./Shopping-cart.html" class="nav-link">Your cart</a>
+								</li>
+								<li class="nav-item">
+									<a href="./Models.html" class="nav-link">Offers</a>
+								</li>
+								<li class="nav-item">
+									<a href="#" class="nav-link">Team</a>
+								</li>
+								<li class="nav-item">
+									<a href="./Registration-form.html" class="nav-link">Contact</a>
+								</li>
+							</ul>
+						</li>
+						<li class="nav-item">
+							<a href="#" class="nav-link">About</a>
+						</li>
+						<li class="nav-item">
+							<a href="./card-navigation.html" class="nav-link">Services</a>
+						</li>
+						<li class="nav-item">
+							<a href="#" class="nav-link">Team</a>
+						</li>
+						<li class="nav-item">
+							<a href="#" class="nav-link">Contact</a>
+						</li>
+						<li class="nav-item">
+							<a href="#" class="nav-link dropdown-toggle">News and Events</a>
+							<ul class="dropdown-menu">
+								<li class="nav-item">
+									<a href="#" class="nav-link dropdown-toggle">Events</a>
+									<ul class="dropdown-menu">
+										<li class="nav-item">
+											<a href="#" class="nav-link">Brimma on NasDaq</a>
+										</li>
+										<li class="nav-item">
+											<a href="#" class="nav-link">Brimma now an Unicorn!</a>
+										</li>
+									</ul>
+								</li>
+								<li class="nav-item">
+									<a href="#" class="nav-link dropdown-toggle">Current news</a>
+									<ul class="dropdown-menu">
+										<li class="nav-item">
+											<a href="./Cards-with-last-updated.html" class="nav-link">Current Openings&nbsp;<span class="badge badge-pill badge-success" id="blink">New</span></a>
+										</li>
+										<li class="nav-item">
+											<a href="#news" class="nav-link">Current News</a>
+										</li>
+										<li class="nav-item">
+											<a href="#" class="nav-link dropdown-toggle">Submenu 3</a>
+											<ul class="dropdown-menu">
+												<li class="nav-item">
+													<a href="#" class="nav-link">Item 1</a>
+												</li>
+												<li class="nav-item">
+													<a href="#" class="nav-link">Item 2</a>
+												</li>
+												<li class="nav-item">
+													<a href="#" class="nav-link">Item 3</a>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+	</div>
+</div>
+<br><br><br><br><br><br>
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+	<!--slides -->
+	<div class="carousel-inner" role="listbox">
+	  <div class="item active">
+		<img src="https://images.unsplash.com/photo-1419064642531-e575728395f2?crop=entropy&fit=crop&fm=jpg&h=400&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1400" alt="Chania">
+	  </div>
+  
+	  <div class="item">
+		<img src="https://images.unsplash.com/photo-1445280471656-618bf9abcfe0?crop=entropy&fit=crop&fm=jpg&h=400&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1400" alt="Chania">
+	  </div>
+  
+	  <div class="item">
+		<img src="https://images.unsplash.com/photo-1445280471656-618bf9abcfe0?crop=entropy&fit=crop&fm=jpg&h=400&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1400" alt="Flower">
+	  </div>
+  
+	</div>
+  
+	<!-- Left and right controls -->
+	<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+	  <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+	  <span class="sr-only">Previous</span>
+	</a>
+	<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+	  <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+	  <span class="sr-only">Next</span>
+	</a>
+</div>
+
+<div class="container mt-4 mb-4 p-3 d-flex justify-content-center">
+   <div class="card p-4">
+      <div class=" image d-flex flex-column justify-content-center align-items-center">
+         <button class="btn btn-secondary">
+         <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" height="100" width="100" /></button>
+         <span class="name mt-3">Eleanor Pen</span> <span class="idd">@eleanorpena</span> 
+         <div class="d-flex flex-row justify-content-center align-items-center gap-2">
+           <span class="idd1">Oxc4c16a645_b21a</span> <span><i class="fa fa-copy"></i></span>
+        </div>
+         <div class="d-flex flex-row justify-content-center align-items-center mt-3"> <span class="number">1069
+           <span class="follow">Followers</span></span> </div>
+           <a href="#" class="btn btn-lg btn-success" data-toggle="modal" data-target="#basicModal">Edit Profile</a>
+		</div>
+           <div class="text mt-3"> <span>Stella work in Brimma tech and she is a Cloud Engineer. </span>
+         </div>
+         <div class="gap-3 mt-3 icons d-flex flex-row justify-content-center align-items-center"> <span><i class="fa fa-twitter"></i></span> <span><i class="fa fa-facebook-f"></i></span> <span><i class="fa fa-instagram"></i></span> <span><i class="fa fa-linkedin"></i></span> </div>
+         <div class=" px-2 rounded mt-4 date "> <span class="join">Joined May,2021</span> </div>
+      </div>
+   </div>
+</div>
+
+<div class="col-12 col-sm-6 col-lg-4">
+	<div class="card border-primary text-primary">
+	  <div class="card-body">
+		<h4 class="card-title">Life at Brimma:</h4>
+		<h6 class="card-subtitle mb-2">USA</h6>
+		<p class="card-text">“Your vibe attracts your tribe.” At Brimma, we believe in creating a place where you long to belong.</p>
+	  </div>
+	</div>
+  </div>
+  
+  <div class="col-12 col-sm-6 col-lg-4">
+	<div class="card border-info text-info">
+	  <div class="card-body">
+		<h4 class="card-title">Testimonials</h4>
+		<h6 class="card-subtitle mb-2">from clients</h6>
+		<p class="card-text">“Brimma has been our 'go to' partner with unique mortgage domain and technical know-how to quickly deliver the modern automation that keeps us ahead of the competition.”</p>
+	  </div>
+	</div>
+  </div>
+  
+  <div class="col-12 col-sm-6 col-lg-4">
+	<div class="card border-success text-success">
+	  <div class="card-body">
+		<h4 class="card-title">Brimma in News:</h4>
+		<h6 class="card-subtitle mb-2">USA</h6>
+		<p class="card-text">Microsoft publishes BizApps partner Brimma Tech's success story.</p>
+	  </div>
+	</div>
+  </div>
+  
+
+  <br><br><br>
+  <section class="bg-light" id="news" >
+	<div class="container">
+		<div class="col-sm-8">
+			<marquee width="100%" direction="up" height="300px">
+			<p class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum voluptates harum, aliquid corporis magni deserunt soluta eos vitae ipsa repellat eveniet provident minus. Porro quod cupiditate temporibus dolor, vitae quo.&nbsp;<span class="badge badge-pill badge-success" id="blink">New</span></p>
+			<p class="text-primary">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est pariatur minima distinctio ratione sunt, culpa autem quibusdam accusantium repellendus earum amet veritatis perferendis ipsa repellat tempore commodi eligendi cumque quod.&nbsp;<span class="badge badge-pill badge-success" id="blink">New</span></p>
+			<p class="text-success">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero esse, incidunt nemo modi quam totam vitae cumque ratione fuga? Rem, iusto porro maxime labore temporibus fugit quaerat similique at consectetur!</p>
+			<p class="text-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore perferendis officiis, magnam soluta molestiae accusamus impedit rem omnis similique sequi veniam! Culpa pariatur reprehenderit omnis odit, dolor ad rem. Expedita!</p>
+			<p class="text-warning">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores commodi iste rem. Eveniet veniam numquam similique, sunt consequuntur commodi accusamus adipisci praesentium? Architecto, delectus! Nam dicta voluptatem cumque eligendi cum.</p>
+			<p class="text-danger">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea vero maxime possimus repellendus delectus labore quisquam voluptas ex obcaecati qui. Adipisci atque reiciendis eveniet fuga maxime. Culpa distinctio ratione voluptatum!</p>
+			<p class="text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta dolore minus illo, recusandae illum ea ad beatae libero. Ut impedit itaque ipsum sunt atque repellendus modi explicabo corrupti accusamus doloribus!</p>
+			<p class="text-dark">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi deserunt sint iure. Modi quod minus molestias porro nostrum iusto, minima eos quae enim totam aut illum vero vitae, adipisci est?</p>
+			<p class="text-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda pariatur accusantium voluptatibus voluptatem velit? Distinctio quis itaque, soluta, temporibus odio veniam vitae deleniti, aspernatur modi inventore facilis perspiciatis repellat ducimus.</p>
+			<p class="text-body">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque maxime reprehenderit officiis, doloribus asperiores rem ea quidem, quas dignissimos deserunt dolore iste veritatis aliquid, laudantium vitae delectus accusantium. Accusantium, molestiae!</p>
+		</marquee>
+	   </div> 
+	</div>
+  </section>
+
+</body>
+</html>

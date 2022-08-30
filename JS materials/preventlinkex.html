@@ -1,0 +1,16 @@
+<html>
+
+<body>
+
+  <a href="https://google.com/">Google</a>
+
+  <script>
+    let link = document.querySelector("a"); // It is the method to access the first matched element
+    link.addEventListener("click", function(event) {
+      console.log("Redirecting Stopped");
+      event.preventDefault();
+    });
+  </script>
+</body>
+
+</html>

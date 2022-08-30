@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    .container {
+        padding: 2rem 0rem;
+    }
+
+    .modal-dialog {
+    position: fixed;
+    top: auto;
+    left: auto;
+    right: 0.5rem;
+    bottom: 0;
+    margin-bottom: 0.5rem;
+    min-width: 300px;
+    max-width: 400px;
+    }
+
+    .notice {
+        padding: 0rem 1rem;
+    }
+        
+    h4 {
+    margin-bottom: 1.5rem;
+    }
+    
+    p {
+    margin-bottom: 0.5rem;
+    }
+
+    
+    .icon {
+        font-size: 3rem;
+    }
+    
+
+  </style>
+</head>
+<body>
+    <div class="container">
+        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#discountModal">
+          Show Discount
+        </button>  
+      </div>
+      
+      <div class="modal fade" id="discountModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" >
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-body text-center">
+              <div class="icon text-danger">
+                <i class="fas fa-gift"></i>
+              </div>
+              <div class="notice">
+                <h4>Get 50% Discount</h4>  
+              </div>
+              <div class="code"></div>
+            </div>
+            <div class="modal-footer d-flex justify-content-between">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-success">Get Code</button>
+            </div>
+          </div>
+        </div>
+      </div>

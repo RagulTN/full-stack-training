@@ -1,0 +1,52 @@
+
+.para1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: orange;
+}
+.para2{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    color: red;
+}
+
+#res-heading{
+    font-family: 'Times New Roman', Times, serif;
+    align-content: center;
+    margin-left: 41%;
+    color: red;
+}
+
+#address{
+    font-style: normal;
+}
+
+hr{
+    width: 100%;
+    margin-left: 0%;
+    border-width: 0;
+    height: 2px;
+    color: black;
+    background-color: black;
+}
+
+.footer{
+    margin-left: 45%;
+    font-size: 20px;
+}
+
+.colors{
+    font-size: 30px;
+}
+.header-tag{
+    background-color: olivedrab;
+    font-size: 30px;
+}
+
+.border{
+    width: 300px;
+    border: 15px solid green;
+    padding: 20px;
+    margin: 10px;
+    border-width: 6px;
+}

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.gzoogleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background-color: white;
+        
+        
+    }
+
+    .navbar ul li a:hover {
+
+        background-color: orangered;
+        width: 50%;
+        transition: 3s;
+        margin: left;
+        display: block;
+    }
+
+    .navbar ul li a:hover::after {
+        width: 100%;
+    }
+
+    .shape_slow {
+        z-index: -5;
+
+        width: 100px;
+        margin-top: -50px;
+        margin-left: 40px;
+
+
+    }
+
+    element.style {
+        transform: translateY(0px);
+    }
+
+    .shape_slow2 {
+        z-index: -5;
+
+        width: 100px;
+        margin-top: -128%;
+        margin-left: 62%;
+
+
+    }
+
+    .career-open {
+        background-color: darkgray;
+        height: 100%;
+    }
+
+    .col-md-4 {
+        transform: translate(-50%, -50%);
+        width: 200px;
+        height: 300px;
+        background: rgba(255, 252, 252, 0.982);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, .37);
+    }
+
+    .row .col-mid-4 {
+        display: block;
+    }
+</style>
+
+<body>
+    <nav class="navbar">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <img src="logo.jpg" style="width: 50px;height:50px;margin-left: -300px;margin-top: 65px;">
+                <a class="navbar-brand" href="home.html"
+                    style="font-family: Arial Black;color: rgb(23, 3, 104);padding: 70px;margin-left: 30px;font-size: x-large;margin-top: 10px;;">Brimma Tech</a>
+            </div>
+            <ul class="nav navbar-nav navbar-right"
+                style=" padding: 66px; display:flex;margin-left: 40px;margin-right: 40px;font-size: x-large;">
+                <li class="active"><a href="home.html" style="color: rgb(74, 72, 72);">Home</a></li>
+                <li><a href="aboutus.html" style="color: rgb(74, 72, 72);">AboutUs</a></li>
+                <li><a href="services.html" style="color: rgb(74, 72, 72);">Services</a></li>
+                <li><a href="career.html" style="color: rgb(74, 72, 72);">Career</a></li>
+                <li><a href="Contact.html" style="color: rgb(74, 72, 72);">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <section>
+        <div class="row">
+            <div class=" col-sm-6">
+                <div class="text" style="margin-left:5% ;">
+                    <h4>Career</h4>
+                    <h1 style="font-size:50px ;color: navy;line-height: 1.5em;font-family: Arial black;">A place to <br>
+                        explore<br>
+                        innovative ideas,<br>
+                        nurture and<br>
+                        cultivate your talents
+                    </h1>
+
+
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="image">
+                    <img src="career-img.png">
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+    <br>
+    <br>
+    <section class="career-open">
+        <div class="row">
+                <div class="col-sm-6" style="margin-left: 10%;">
+                    <h2 class="opencrerHd beforeLine"
+                        style="transform:translate3d(0px, 0px, 0px) ;opacity: 1;color: navy;font-size: xx-large; font-family: Rubik;">
+                        Current Openings</h2>
+                    <div class="card-deck">
+                        <div class="card bg-default" style="background-color:#fff;  width: 300px;height: 200px;">
+                            <div class="card-body text-center">
+                                <p class="card-text"> 13-July-2022</p>
+                                <p class="card-text">Frontend Developer - NodeJS, ReactJS </p>
+                                <a href="https://zaparetech.com/frontend-developer-node-react#apply-now">Apply Now</a>
+                                <hr color="orangered" style="height: 2px ;width: 10%;color: aliceblue;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                    <div class="col-sm-6" style="margin-top:65px;margin-left: -20%;height: 300px;">
+                        
+                        <div class="card-deck">
+                            <div class="card bg-default" style="background-color:#fff; width: 300px;height: 200px;">
+                                <div class="card-body text-center">
+                                    <p class="card-text"> 13-July-2022</p>
+                                    <p class="card-text">Bakend Developer - NodeJS, ReactJS </p>
+                                    <a href="https://zaparetech.com/backend-developer-python#apply-now"  >Apply Now</a>
+                                    <hr color="orangered" style="height: 2px ;width: 10%;color: aliceblue;margin-top: 20px;">
+                                </div>
+                            </div>
+                        </div> 
+                    </div> 
+                <div class="col-sm-6" style="margin-left: 70%;margin-top: -19.5%;">
+                    <div class="card-deck">
+                        <div class="card bg-default" style="background-color:#fff; width: 300px;height: 200px;">
+                            <div class="card-body text-center">
+                                <p class="card-text"> 13-July-2022</p>
+                                <p class="card-text"> Technical Project Manager – Cloud Application Development </p>
+                                <a href="https://zaparetech.com/technical-project-manager#apply-now">Apply Now </a>
+                                <hr color="orangered" style="height: 2px ;width: 10%;color: aliceblue;">
+                            </div>
+                        </div>
+                    </div>
+                </div>     
+                         
+
+             
+        </div>   
+           
+
+                 
+
+
+
+    </section>
+</body>
+
+</html>

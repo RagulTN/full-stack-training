@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Exercise</title>
+</head>
+<body>
+    <h2> Javascript Exercises </h2>
+
+    <h3>First question</h3>
+    <p id="1st"></p>
+    <p id="1.2"></p>
+    <p id="1.3"></p>
+    <p id="1.4"></p>
+
+    <h3>Second question</h3>
+    <p id="2nd"></p>
+
+    <h3>Third question</h3>
+    <p id="3rd"></p>
+
+    <h3>fourth question</h3>
+    <p id="4th"></p>
+
+
+    <script>
+        //1
+        let date = new Date();
+        var dd = date.getDate();
+        var mm = date.getMonth();
+        var yyyy = date.getFullYear();
+        document.getElementById("1st").innerHTML = dd +'/'+ mm + '/' + yyyy;
+        document.getElementById("1.2").innerHTML = mm +'/'+ dd + '/' + yyyy;
+        document.getElementById("1.3").innerHTML = dd +'-'+ mm + '-' + yyyy;
+        document.getElementById("1.4").innerHTML = dd +'-'+ mm + '-' + yyyy;
+
+
+        //2
+        const year = prompt('year: ');
+        checkLeapYear(year);
+
+        function checkLeapYear(year){
+            if((year % 4 == 0) && (year % 400 == 0)){
+                document.getElementById("2nd").innerHTML = year + " is a leap year";
+            }
+            else{
+                document.getElementById("2nd").innerHTML = year + " is not a leap year";
+            }
+        }
+
+        //3rd
+        const matrix = prompt('Enter matrix : ')
+        //[[1, 0, 0], [0, 2, 0], [0, 0, 3]]);
+        diagMatrix(matrix);
+
+        function diagMatrix(matrix){
+            for (let i = 0; i < matrix.length; i++) {
+                for (let j = 0; j < matrix.length; j++) {
+                    if( i !== j && matrix[i][j] !== 0){
+                        document.getElementById("3rd").innerHTML = false;
+                    }
+                }
+            }
+            document.getElementById("3rd").innerHTML = true;
+        }
+
+        //4th
+        let num1 = prompt('num1 : ');
+        let num2 = prompt('num2 : ');
+        let num3 = prompt('num3 : ');
+
+        if((num1 !== num2) && (num1 !==num3) && (num2 !== num3)) {
+            document.getElementById("4th").innerHTML = "all are unequal";
+        }
+        if(num1==num2) {document.getElementById("4th").innerHTML = num3;}
+        if(num1==num3) {document.getElementById("4th").innerHTML = num2;}
+
+        
+    </script>
+</body>
+</html>

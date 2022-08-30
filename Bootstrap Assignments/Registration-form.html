@@ -1,0 +1,261 @@
+<html>
+	<head>
+		<title>REGISTRATION APPLICATION FORM FOR COURSE – O LEVEL</title>
+	</head>
+	<!-- CSS only -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<script>
+		$(document).ready(function() {
+		$("#btnFetch").click(function() {
+		// disable button
+		$(this).prop("disabled", true);
+		// add spinner to button
+		$(this).html(
+			`<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Loading...`
+		); setTimeout(function() {
+			$this.button('reset');
+		}, 2000);
+		});
+	});
+
+	</script>
+	<body>
+
+		<center><h3>REGISTRATION APPLICATION FORM FOR COURSE – O LEVEL</h3></center>
+		<form>
+			<table align="center" width="80%" border="1" cellpadding="5px" cellspacing="0" class="table table-bordered">
+				<tr bgcolor="success">
+					<td colspan="3"><font color="white"><b>1. Registration Form</b></font></td>
+				</tr>
+				<tr>
+					<td>1.0</td>
+					<td>Have you got online reference number for enrolment with<br/> NIELIT/Accreditation/Extension Center </td>
+					<td><label>No</label>  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+						<label>Yes</label>  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+					</td>
+				</tr>
+				<tr>
+					<td>1.1</td>
+					<td>Registration sought for</td>
+					<td>
+						<select disabled>
+							<option>O LEVEL</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>1.2</td>
+					<td>Applied As</td>
+					<td><label>Direct Candidate</label><input type="radio" name="type" checked/><label>Through Institute</label><input type="radio" name="type"/></td>					
+				</tr>
+				<tr> 
+					<td>1.3</td>
+					<td>Exam Cycle </td>
+					<td><input type="text" value="July, 2022" readonly/></td>					
+				</tr>
+				<tr>
+					<td>1.4</td>
+					<td>Registration Fee Will Be Paid By? </td>
+					<td><input type="text" value="Candidate Direct to NIELIT" disabled/></td>					
+				</tr>
+				<tr bgcolor="success">
+					<td colspan="3"><font color="white"><b>2. Applicant's Personal Details</b></font></td>
+				</tr>
+				<tr>
+					<td>2.1</td>
+					<td>Applicant's full name </td>
+					<td>
+						<select >
+							<option>--Select --</option>
+							<option>Mr.</option>
+							<option>Ms.</option>
+							<option>Others</option>
+						</select>
+						<input type="text" size="20"/>
+					</td>
+				</tr>
+				<tr>
+					<td>2.2</td>
+					<td>Care Of </td>
+					<td><label>Parents</label><input type="radio" name="care" checked/><label>Guardian </label><input type="radio" name="care"/></td>					
+				</tr>
+				<tr>
+					<td>2.2.1</td>
+					<td>Father's Name </td>
+					<td>
+						<select disabled >
+							<option>Mr.</option>
+						</select>
+						<input type="text" size="20"/>
+					</td>
+				</tr>
+				<tr>
+					<td>2.2.2</td>
+					<td>Mother's Name </td>
+					<td>
+						<select disabled >
+							<option>Mrs.</option>
+						</select>
+						<input type="text" size="20"/>
+					</td>
+				</tr>
+				<tr>
+					<td>2.3</td>
+					<td>Gender</td>
+					<td>
+						<label>Male</label><input type="radio" name="Gender"/>
+						<label>Female </label><input type="radio" name="Gender"/>
+						<label>Others </label><input type="radio" name="Gender"/>
+					</td>					
+				</tr>
+				<tr>
+					<td>2.4</td>
+					<td>Date of Birth</td>
+					<td>
+						<input type="date"/>
+					</td>					
+				</tr>
+				<tr>
+					<td>2.5</td>
+					<td>Marital Status</td>
+					<td>
+						<select>
+							<option>--Select--</option>
+							<option>Single</option>
+							<option>Married</option>
+							<option>Divorced</option>
+							<option>Widowed</option>
+						</select>
+					</td>					
+				</tr>
+				<tr>
+					<td>2.6</td>
+					<td>Category </td>
+					<td>
+						<select>
+							<option>--Select--</option>
+							<option>General</option>
+							<option>OBC</option>
+							<option>SC</option>
+							<option>ST</option>
+						</select>
+					</td>					
+				</tr>
+				<tr>
+					<td>2.7</td>
+					<td>Handicapped </td>
+					<td><label>No</label><input type="radio" name="Handicapped" checked/><label>Yes</label><input type="radio" name="Handicapped"/></td>
+				</tr>
+				<tr>
+					<td>2.8</td>
+					<td>Ex-Serviceman </td>
+					<td><label>No</label><input type="radio" name="Serviceman" checked/><label>Yes</label><input type="radio" name="Serviceman"/></td>
+				</tr>
+				<tr>
+					<td>2.9</td>
+					<td>EWS </td>
+					<td><label>No</label><input type="radio" name="EWS" checked/><label>Yes</label><input type="radio" name="EWS"/></td>
+				</tr>
+				<tr>
+					<td>2.10</td>
+					<td>Religion </td>
+					<td>
+						<select>
+							<option>--Select--</option>
+							<option>Hindu</option>
+							<option>Muslim</option>
+							<option>Christian</option>
+						</select>
+					</td>					
+				</tr>
+				<tr bgcolor="success">
+					<td colspan="3"><font color="white"><b>3. Contact Details</b></font></td>
+				</tr>
+				<tr>
+					<td>3.1</td>
+					<td>Mobile Number</td>
+					<td><input type="tel"/></td>
+				</tr>
+				<tr>
+					<td>3.2</td>
+					<td>Email ID</td>
+					<td><input type="email"/></td>
+				</tr>
+				<tr>
+					<td>3.3</td>
+					<td>Address Line 1</td>
+					<td><input type="text"/></td>
+				</tr>
+				<tr>
+					<td>3.4</td>
+					<td>Address Line 2</td>
+					<td><input type="text"/></td>
+				</tr>
+				<tr>
+					<td>3.5</td>
+					<td>City</td>
+					<td><input type="text"/></td>
+				</tr>
+				<tr>
+					<td>3.6</td>
+					<td>State</td>
+					<td>
+						<select>
+							<option>--Select--</option>
+							<option value="Delhi">Delhi</option>
+							<option value="Goa">Goa</option>>
+							<option value="Kerala">Kerala</option>
+							<option value="Tamil Nadu">Tamil Nadu</option>
+							</select>
+					</td>
+				</tr>
+				<tr>
+					<td>3.7</td>
+					<td>Pin Code</td>
+					<td><input type="text"/></td>
+				</tr>
+				<tr bgcolor="success">
+					<td colspan="3"><font color="white"><b>4. Educational / Qualification Details</b></font></td>
+				</tr>
+				<tr>
+					<td>4.1</td>
+					<td>Highest Educational Qualification</td>
+					<td>
+						<select>
+							<option>--Select--</option>
+							<option>10th</option>
+							<option>12th</option>
+							<option>Graduate</option>
+							<option>Post Graduate</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>4.2</td>
+					<td>Year of Passing</td>
+					<td><input type="text"/></td>
+				</tr>
+				<tr bgcolor="success">
+					<td colspan="3"><font color="white"><b>5. Identification Details</b></font></td>					
+				</tr>
+				<tr>
+					<td>5.1</td>
+					<td>Aadhar Card Number</td>
+					<td><input type="text" maxlength="12"/></td>
+				</tr>
+				<tr>
+					<td>5.2</td>
+					<td>Upload Photo</td>
+					<td><input type="file"td>
+				</tr>
+				<tr>
+					<td colspan="3" align="center">
+						<div style="margin:3em;">
+							<button type="button" class="btn btn-primary btn-lg " id="btnFetch" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Processing Order">Submit Order</button>					</td>
+				</tr>
+			</table>
+		</form>
+	</body>
+</html>
