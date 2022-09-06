@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        
+        function Phonenumber() {
+            var txtNumber = document.getElementById("txtNumber").value;
+            var phoneno = /^\+?([0-9]{3})\)?[-. ]?([0-9]{8})$/;
+            var phoneno1 = /^\d{10}$/;
+            
+            if(txtNumber != '')
+            {
+                if(txtNumber.match(phoneno1))
+                {
+                    return true;
+                }
+               else if (txtNumber.match(phoneno)) {
+                return true;
+            } else {
+                alert("invalid Phone number");
+                return false;
+            }  
+            }
+           
+        }
+        function ValidateGamil() {
+            var txtGmail = document.getElementById("txtGmail").value;
+            
+            var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            if(txtGmail != '')
+            {
+               if  (txtGmail.match(mailformat)) {
+                return true;
+            } else {
+                alert("invalid Gmail number");
+                return false;
+            }  
+            }
+           
+        }
+        function ValidateAddress() {
+            var txtAddress = document.getElementById("txtAddress").value;
+            
+            var addressformat = "[#.0-9a-zA-Z\s,-]+$";
+            if(txtAddress != '')
+            {
+               if  (txtAddress.match(addressformat)) {
+                return true;
+            } else {
+                alert("invalid Address number");
+                return false;
+            }  
+            }
+           
+        }
+        function ValidateCity() {
+            var txtCity = document.getElementById("txtCity").value;
+            
+            var cityformat = /^[a-zA-Z ]{2,30}$/;
+            if(txtCity != '')
+            {
+               if  (txtCity.match(cityformat)) {
+                return true;
+            } else {
+                alert("invalid city name");
+                return false;
+            }  
+            }
+           
+        }
+        function ValidateState() {
+            var txtState = document.getElementById("txtState").value;
+            
+            
+            if(txtState !='')
+            { 
+                return true;
+            }  
+              }
+        function ValidatePincode() {
+            var txtPincode = document.getElementById("txtPincode").value;
+            
+            var pincode =/^\d{6}$/;;
+            if(txtPincode != '')
+            {
+               if  (txtPincode.match(pincode)) {
+                return true;
+            } else {
+                alert("invalid Pincode name");
+                return false;
+            }  
+            }
+           
+        }
+        
+    </script>
+
+    <center>
+        <form method="post" onsubmit="return Validation()">
+
+
+            <fieldset style="width: 60%;">
+                <legend>Contact Details</legend>
+                <table>
+                    <tr>
+                        <td colspan="3">
+                            <label>Mobile Number</label>
+                            <input type="text" name="txtNumber" id="txtNumber" onblur="Phonenumber();" required style="margin-left:100px ;">
+                            </div>
+                        </td>
+                        <td>
+                            &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;
+                            <label> Email Id</label>
+                            <input type="email" name="txtGmail" id="txtGmail" onblur="ValidateGamil();" required style="margin-left: 150px;">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <label>Address Line1</label>
+                            <input type="text" id="txtAddress" name="txtAddress" onblur="ValidateAddress();" required style="margin-left:110px ;">
+                            </div>
+                        </td>
+                        <td>
+                            &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;
+                            <label> Address Line2</label>
+                            <input type="text" id="txtAddress" name="txtAddress" onblur="ValidateAddress();" required style="margin-left: 115px;">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <label>City</label>
+                            <input type="text" id="txtCity" name="txtCity" onblur="ValidateCity();" required style="margin-left:175px ;">
+                            </div>
+                        </td>
+                        <td>
+                            &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;
+                            <label> State</label>
+                            <select style="margin-left: 180px;" id="txtState" name="txtState" onblur="ValidateState();" required>
+                                <option ></option>
+                                <option>Tamilnadu</option>
+                                <option>Kerala</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <label>Pincode</label>
+                            <input type="number" id="txtPincode" name="txtPincode" onblur="ValidatePincode();" required style="margin-left:150px ;">
+                            </div>
+                        </td>
+                    </tr>
+
+                    
+
+                </table>
+
+            </fieldset>
+            <div class="but" >
+        <input type="submit" value="Submit"  >
+        <input type="submit" value="back">
+    </div>
+        </form>
+    </center>
+</body>
+
+</html>

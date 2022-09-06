@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        td{
+            padding: 0.5%;
+        }
+    </style>
+</head>
+<body>
+    <script type="text/javascript">
+       
+       function ValidateApplicantname() {
+            var txtApplicantname = document.getElementById("txtApplicantname").value;
+            
+            var Applicantnameformat = /^[a-zA-Z ]{2,30}$/;
+            if(txtApplicantname != '')
+            {
+               if  (txtApplicantname.match(Applicantnameformat)) {
+                return true;
+            } else {
+                alert("invalid Applicant name");
+                return false;
+            }  
+            }
+           
+        }
+        function ValidateFathername() {
+            var txtFathername = document.getElementById("txtFathername").value;
+            
+            var Fathernameformat = /^[a-zA-Z ]{2,30}$/;
+            if(txtFathername != '')
+            {
+               if  (txtFathername.match(Fathernameformat)) {
+                return true;
+            } else {
+                alert("invalid Father name");
+                return false;
+            }  
+            }
+           
+        }
+        function ValidateMothername() {
+            var txtMothername = document.getElementById("txtMothername").value;
+            
+            var Mothernameformat = /^[a-zA-Z ]{2,30}$/;
+            if(txtMothername != '')
+            {
+               if  (txtMothername.match(Mothernameformat)) {
+                return true;
+            } else {
+                alert("invalid Mother name");
+                return false;
+            }  
+            }
+           
+        }
+        
+       
+        
+          
+        
+  
+      </script>
+    <center>
+        <form  method="post" onsubmit="return Validation()">
+            <div class="form" >
+                <h1 style="text-align: center;">APPLICATION FORM</h1>
+    
+                <fieldset style="width: 60%;">
+                    <legend>personal details</legend>
+    
+                    <table>
+                        <tr>
+                            <td colspan="3">
+                                <label>Applicants full name</label>
+                                <select required> 
+                                    <div class="text" class="active">
+                                        <option> </option>
+                                        <option> Mr. </option>
+                                        <option>Ms.</option>
+                                        <option>Mrs.</option>
+                                </select>
+                                <input type="text" required style="margin-left:9px ;" id="txtApplicantname" name="txtApplicantname" onblur="ValidateApplicantname();" >
+            </div>
+            </td>
+            <td>
+                &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;
+                <label>Care Of</label>
+                <input type="checkbox" style="margin-left: 9px;" >Parents <input type="checkbox" id="check" >Guardians
+            </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <div class="text">
+                        <label>Fathers name</label>
+                        <select required>
+                            <option></option>
+                            <option>Mr.</option>
+                        </select>
+                        <input type="text" required style="margin-left:9px" id="txtFathername" name="txtFathername" onblur=" ValidateFathername();">
+                    </div>
+                </td>
+                <td>
+                    <div class="text">
+
+                        <label>Mothers name</label>
+                        <select required>
+                            <option></option>
+                            <option>Mrs.</option>
+                        </select>
+                        <input type="text" required style="margin-left: 18px;" id="txtMothername" name="txtMothername" onblur="ValidateMothername()">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <div class="text">
+                        <label>Gender</label>
+    
+                        <input type="checkbox" style="margin-left: 160px;" id="check">male <input type="checkbox" id="check">female <input
+                            type="checkbox" id="check">others
+    
+    
+                    </div>
+                </td>
+                <td>
+                    &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;
+                    <label>DOB</label>
+                    <input type="date" required style="margin-left: 166px;" >
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <div class="text">
+                        <label>Marital Status</label>
+                        <select style="margin-left: 120px;" required>
+                            <option ></option>
+                            <option>Married</option>
+                            <option>Unmaried</option>
+                        </select>
+                    </div>
+                </td>
+                <td> &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;
+                    <label>Category</label>
+                    <select style="margin-left:140px" required>
+                        <option></option>
+                        <option>select</option>
+                    </select>
+    
+                </td>
+            <tr>
+                <td colspan="3">
+                    <div class="text">
+                        <label>Handicapted</label>
+                        <input type="radio" name="gender" style="margin-left: 120px;" id="Yes">Yes <input name="gender" type="radio" id="No">   No
+                    </div>
+                </td>
+                <td>&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;
+                    <label>Ex-serviceman</label>
+                    <input type="checkbox" style="margin-left: 100px;">Yes <input type="checkbox">No
+    
+                </td>
+            </tr>
+            </tr>
+    
+    
+            </table>
+            </fieldset><br>
+            <div class="but" >
+                <input type="submit" value="Submit"  >
+                <input type="submit" value="back">
+            </div>
+                </form>
+        </center>
+</body>
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         function ValidateBoard() {
+            var txtBoard = document.getElementById("txtBoard").value;
+            
+            var boardformat = /^[a-zA-Z ]{2,30}$/;
+            if(txtBoard != '')
+            {
+               if  (txtBoard.match(boardformat)) {
+                return true;
+            } else {
+                alert("invalid Board/University name");
+                return false;
+            }  
+            }
+           
+        }
+        function ValidateBoard1() {
+            var txtBoard1 = document.getElementById("txtBoard1").value;
+            
+            var boardformat1 = /^[a-zA-Z ]{2,30}$/;
+            if(txtBoard1 != '')
+            {
+               if  (txtBoard1.match(boardformat1)) {
+                return true;
+            } else {
+                alert("invalid Board/University name");
+                return false;
+            }  
+            }
+           
+        }
+
+        function ValidateYear() {
+            var txtYear = document.getElementById("txtYear").value;
+            
+            
+            var yearformat =/^\d{4}$/;
+            if(txtYear != '')
+            {
+               if(txtYear.match(yearformat)) {
+                return true;
+            } else {
+                alert("invalid Year ");
+                return false;
+            }  
+            }
+           
+        }
+        function ValidateMark() {
+            var txtMarks = document.getElementById("txtMarks").value;
+            
+            
+            var marksformatofsslc = /^\d{3}$/;
+            if(txtMarks != '')
+            {
+               if(txtMarks.match(marksformatofsslc)) {
+                return true;
+            } else {
+                alert("invalid Mark please put corrected mark ");
+                return false;
+            }  
+            }
+           
+        }
+        function ValidateMark1() {
+            var txtMarks1 = document.getElementById("txtMarks1").value;
+            
+            
+            var marksformatofhsc = /^\d{3}$/;
+            if(txtMarks1 != '')
+            {
+               if(txtMarks1.match(marksformatofhsc)) {
+                return true;
+            } else {
+                alert("invalid Mark please put corrected mark ");
+                return false;
+            }  
+            }
+           
+        }
+        function ValidateMarkObtain() {
+            var txtMarkObtain = document.getElementById("txtMarkObtain").value;
+            
+            
+            var marksformatofdegree = /^\d{1,3}$/;
+            if(txtMarkObtain != '')
+            {
+               if(txtMarkObtain.match(marksformatofdegree)) {
+                return true;
+            } else {
+                alert("invalid Mark please put corrected mark ");
+                return false;
+            }  
+            }
+           
+        }
+        function ValidatePrecentage() {
+            var txtPrecentage = document.getElementById("txtPrecentage").value;
+            
+            
+            var marksformatofprecentage = /^([1-9]([0-9])?|0)(\.[0-9]{1,2})?$/;
+            if(txtPrecentage != '')
+            {
+               if(txtPrecentage.match(marksformatofprecentage)) {
+                return true;
+            } else {
+                alert("invalid Precentage please put corrected Precentage of Mark ");
+                return false;
+            }  
+            }
+           
+        }
+
+    </script>
+    <center>
+        <form method="post" onsubmit="return Validation()">
+       
+        <fieldset style="width: 50%;">
+            <legend>Qualification details</legend>
+            <table class="table3" style="width: 100%;">
+                <tr>
+                    <th>Sr No</th>
+                    <th>Qualification</th>
+                    <th>Board/University</th>
+                    <th>Passing Year</th>
+                    <th>Max Marks</th>
+                    <th>Marks obtain</th>
+                    <th>Percentage</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>
+                        <select required>
+                            <option></option>
+                            <option>10th</option>
+                            <option>+2</option>
+                            <option>Degree</option>
+                        </select>
+                    </td>
+                    <td><input type="text" name="txtBoard" id="txtBoard" onblur="ValidateBoard();" required></td>
+                    <td><input type="number" name="txtYear" id="txtYear" onblur="ValidateYear();" required ></td>
+                    <td><input type="number" name="txtMarks" id="txtMarks" onblur="ValidateMark();" required></td>
+                    <td><input type="number" name="txtMarkObtain" id="txtMarkObtain" onblur="ValidateMarkObtain()" required></td>
+                    <td><input type="number" name="txtPrecentage" id="txtPrecentage" onblur="ValidatePrecentage()" required></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>
+                        <select required>
+                            <option></option>
+                            <option>10th</option>
+                            <option>+2</option>
+                            <option>Degree</option>
+                        </select>
+                    </td>
+                    <td><input type="text"   name="txtBoard1" id="txtBoard1" onblur="ValidateBoard1();" required></td>
+                    <td><input type="number" name="txtYear" id="txtYear2" onblur="ValidateYear();" required></td>
+                    <td><input type="number" name="txtMarks1" id="txtMarks1" onblur="ValidateMark1();" required></td>
+                    <td><input type="number"  name="txtMarkObtain" id="txtMarkObtain" onblur="ValidateMarkObtain()" required></td>
+                    <td><input type="number"  name="txtPrecentage" id="txtPrecentage" onblur="ValidatePrecentage()" required></td>
+
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>
+                        <select required>
+                            <option></option>
+                            <option>10th</option>
+                            <option>+2</option>
+                            <option>Degree</option>
+                        </select>
+                    </td>
+                    <td><input type="text"  name="txtBoard2" id="txtBoard2" onblur="ValidateBoard2();" required></td>
+                    <td><input type="number"  name="txtYear" id="txtYear3" onblur="ValidateYear();" required></td>
+                    <td><input type="number"  name="txtMarks" id="txtMarks" onblur="ValidateMark();" required></td>
+                    <td><input type="number"  name="txtMarkObtain" id="txtMarkObtain" onblur="ValidateMarkObtain()" required></td>
+                    <td><input type="number"  name="txtPrecentage" id="txtPrecentage" onblur="ValidatePrecentage()" required></td>
+
+                </tr>
+            </table>
+        </fieldset>
+        <div class="but" >
+            <input type="submit" value="Submit"  >
+            <input type="submit" value="back">
+        </div>
+        </form>
+    </center>
+        
+</body>
+</html>

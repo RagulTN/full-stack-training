@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript script</title>
+    <script>
+        function checkBoxValid()
+        {
+            var form_data = new FormData(document.querySelector("form"));
+            if(!form_data.has("langs[]"))
+            {
+                document.getElementById("chk_option_error").style.visibility = "visible";
+                return false;      
+            }
+            else
+            {
+                document.getElementById("chk_option_error").style.visibility = "hidden";
+                return true;
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <form onsubmit="return checkBoxValid()" method="post">
+        Select all the languages you know:
+        <div style="visibility:hidden; color:red; " id="chk_option_error">
+        Please select at least one option
+        </div>
+        <fieldset style="width: 60%;">
+                 <legend>Language Knowledge</legend>
+                 <table class="table4" style="width: 100%;">
+                    <tr>
+                       <th>Language</th>
+                       <th>Reading</th>
+                       <th>Writing</th>
+                       <th>Spoken</th>
+                    </tr>
+                    <tr>
+                       <td style="text-align: center;">Hindi</td>
+                       <td>
+                          <input type="checkbox" style="align-items: center;">
+                       </td>
+                       <td>
+                          <input type="checkbox" style="text-align: center;">
+                       </td>
+                       <td>
+                          <input type="checkbox" style="text-align: center;">
+                       </td>
+                    </tr>
+                    <tr>
+                       <td style="text-align: center;">Tamil</td>
+                       <td>
+                          <input type="checkbox" style="align-items: center;">
+                       </td>
+                       <td>
+                          <input type="checkbox" style="text-align: center;">
+                       </td>
+                       <td>
+                          <input type="checkbox" style="text-align: center;">
+                       </td>
+                    </tr>
+                    <tr>
+                       <td style="text-align: center";  value="check">English</td>
+                       <td>
+                          <input type="checkbox" name="langs[]" style="align-items: center;">
+                       </td>
+                       <td>
+                          <input type="checkbox" name="langs[]" style="text-align: center;">
+                       </td>
+                       <td>
+                          <input type="checkbox" name="langs[]" style="text-align: center;">
+                       </td>
+                    </tr>
+                 </table>
+              </fieldset>
+              <div class="but" style="text-align: center;">
+                 <input type="submit" value="Submit"  value="Submit" />
+                 <input type="submit" value="back" >
+              </div>
+          </form>
+</body>
+</html>

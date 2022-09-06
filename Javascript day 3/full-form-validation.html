@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript" src="./index.js"></script>
+
+    <center>
+        <form method="post" >
+            <div class="form" >
+                <h1 style="text-align: center;">APPLICATION FORM</h1>
+    
+                <fieldset style="width: 60%;">
+                    <legend>personel details</legend>
+    
+                    <table>
+                        <tr>
+                            <td colspan="3">
+                                <label>Applicants full name</label>
+                                <select required> 
+                                    <div class="text" class="active">
+                                        <option> </option>
+                                        <option> Mr. </option>
+                                        <option>Ms.</option>
+                                        <option>Mrs.</option>
+                                </select>
+                                <input type="text" required style="margin-left:10px ;" id="txtApplicantname" name="txtApplicantname" onblur="ValidateApplicantname();" >
+            </div>
+            </td>
+            <td>
+                &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;
+                <label>Care Of</label>
+                <input type="checkbox" style="margin-left: 120px;" >Parents <input type="checkbox" id="check" >Guardians
+            </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <div class="text">
+                        <label>Fathers name</label>
+                        <select required>
+                            <option></option>
+                            <option>Mr.</option>
+                        </select>
+                        <input type="text" required spellcheck="true" style="margin-left:75px" id="txtFathername" name="txtFathername" onblur=" ValidateFathername();">
+                    </div>
+                </td>
+                <td>
+                    <div class="text">
+                        &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;
+                        <label>Mothers name</label>
+                        <select required>
+                            <option></option>
+                            <option>Mrs.</option>
+                        </select>
+                        <input type="text" required style="margin-left: 54px;" id="txtMothername" name="txtMothername" onblur="ValidateMothername()">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <div class="text">
+                        <label>Gender</label>
+    
+                        <input name="gender" type="radio" style="margin-left: 9px;" id="check">male <input name="gender" type="radio" id="check">female <input
+                            type="radio" id="check">others
+    
+    
+                    </div>
+                </td>
+                <td>
+                    &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;
+                    <label>DOB</label>
+                    <input type="date" required style="margin-left: 166px;" >
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <div class="text">
+                        <label>Marital Status</label>
+                        <select style="margin-left: 120px;" required>
+                            <option ></option>
+                            <option>Married</option>
+                            <option>Unmaried</option>
+                        </select>
+                    </div>
+                </td>
+                <td> &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;
+                    <label>Category</label>
+                    <select style="margin-left:140px" required>
+                        <option></option>
+                        <option>select</option>
+                    </select>
+    
+                </td>
+            <tr>
+                <td colspan="3">
+                    <div class="text">
+                        <label>Handicapted</label>
+                        <input type="radio" name="Handicapted style="margin-left: 120px;" id="Yes">Yes <input name="Handicapted" type="radio" id="No">   No
+                    </div>
+                </td>
+                <td>&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;
+                    <label>Ex-serviceman</label>
+                    <input type="radio" style="margin-left: 100px;">Yes <input type="radio">No
+    
+                </td>
+            </tr>
+            </tr>
+    
+    
+            </table>
+            </fieldset><br>
+
+            <fieldset style="width: 60%;">
+                <legend>Contact Details</legend>
+                <table>
+                    <tr>
+                        <td colspan="3">
+                            <label>Mobile Number</label>
+                            <input type="text" name="txtNumber" id="txtNumber" onblur="Phonenumber();" required style="margin-left:100px ;">
+                            </div>
+                        </td>
+                        <td>
+                            &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;
+                            <label> Email Id</label>
+                            <input type="email" name="txtGmail" id="txtGmail" onblur="ValidateGamil();" required style="margin-left: 150px;">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <label>Address Line1</label>
+                            <input type="text" id="txtAddress" name="txtAddress" onblur="ValidateAddress();" required style="margin-left:110px ;">
+                            </div>
+                        </td>
+                        <td>
+                            &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;
+                            <label> Address Line2</label>
+                            <input type="text" id="txtAddress" name="txtAddress" onblur="ValidateAddress();" required style="margin-left: 115px;">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <label>City</label>
+                            <input type="text" id="txtCity" name="txtCity" onblur="ValidateCity();" required style="margin-left:175px ;">
+                            </div>
+                        </td>
+                        <td>
+                            &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;
+                            <label> State</label>
+                            <select style="margin-left: 180px;" id="txtState" name="txtState" onblur="ValidateState();" required>
+                                <option ></option>
+                                <option>Tamilnadu</option>
+                                <option>Kerala</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <label>Pincode</label>
+                            <input type="number" id="txtPincode" name="txtPincode" onblur="ValidatePincode();" required style="margin-left:150px ;">
+                            </div>
+                        </td>
+                    </tr>
+
+                    
+
+                </table>
+
+            </fieldset> <br>
+
+            <fieldset style="width: 50%;">
+                <legend>Qualification details</legend>
+                <table class="table3" style="width: 100%;">
+                    <tr>
+                        <th>Sr No</th>
+                        <th>Qualification</th>
+                        <th>Board/University</th>
+                        <th>Passing Year</th>
+                        <th>Max Marks</th>
+                        <th>Marks obtain</th>
+                        <th>Percentage</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>
+                            <select required>
+                                <option></option>
+                                <option>10th</option>
+                                <option>+2</option>
+                                <option>Degree</option>
+                            </select>
+                        </td>
+                        <td><input type="text" name="txtBoard" id="txtBoard" onblur="ValidateBoard();" required></td>
+                        <td><input type="number" name="txtYear" id="txtYear" onblur="ValidateYear();" required ></td>
+                        <td><input type="number" name="txtMarks" id="txtMarks" onblur="ValidateMark();" required></td>
+                        <td><input type="number" name="txtMarkObtain" id="txtMarkObtain" onblur="ValidateMarkObtain()" required></td>
+                        <td><input type="number" name="txtPrecentage" id="txtPrecentage" onblur="ValidatePrecentage()" required></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>
+                            <select required>
+                                <option></option>
+                                <option>10th</option>
+                                <option>+2</option>
+                                <option>Degree</option>
+                            </select>
+                        </td>
+                        <td><input type="text"   name="txtBoard1" id="txtBoard1" onblur="ValidateBoard1();" required></td>
+                        <td><input type="number" name="txtYear" id="txtYear2" onblur="ValidateYear();" required></td>
+                        <td><input type="number" name="txtMarks1" id="txtMarks1" onblur="ValidateMark1();" required></td>
+                        <td><input type="number"  name="txtMarkObtain" id="txtMarkObtain" onblur="ValidateMarkObtain()" required></td>
+                        <td><input type="number"  name="txtPrecentage" id="txtPrecentage" onblur="ValidatePrecentage()" required></td>
+    
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>
+                            <select required>
+                                <option></option>
+                                <option>10th</option>
+                                <option>+2</option>
+                                <option>Degree</option>
+                            </select>
+                        </td>
+                        <td><input type="text"  name="txtBoard2" id="txtBoard2" onblur="ValidateBoard2();" required></td>
+                        <td><input type="number"  name="txtYear" id="txtYear3" onblur="ValidateYear();" required></td>
+                        <td><input type="number"  name="txtMarks" id="txtMarks" onblur="ValidateMark();" required></td>
+                        <td><input type="number"  name="txtMarkObtain" id="txtMarkObtain" onblur="ValidateMarkObtain()" required></td>
+                        <td><input type="number"  name="txtPrecentage" id="txtPrecentage" onblur="ValidatePrecentage()" required></td>
+    
+                    </tr>
+                </table>
+            </fieldset><br>
+
+            <fieldset style="width:60%;">
+                <legend>Identification Details</legend>
+                <table class="table5" style=>
+                    <tr>
+                        <td id="adhaar" >Adhaar Card Number</td>
+                        &nbsp;&nbsp;&nbsp;
+                        <td><input type="number" id="txtAadhar" onblur="AadharValidate();" required></td>
+                        <td >Pan Card Number</td>
+                        &nbsp;&nbsp;&nbsp;
+                        <td><input   name="txtPANCard" type="text" id="txtPANCard" class="PAN"  onblur="ValidatePAN();" required></td>
+        
+                    </tr>
+                    <tr>
+                        <td>Upload Photo</td>
+                        &nbsp;&nbsp;&nbsp;
+                        <td><input type="file"> </td>
+                        <td>Upload Signature</td>
+                        &nbsp;&nbsp;&nbsp;
+                        <td><input type="file"> </td>
+                    </tr>
+                </table>
+            </fieldset>
+
+
+            <div class="but" >
+        <input type="submit" value="Submit"  >
+        <input type="submit" value="back">
+    </div>
+        </form>
+    </center>
+</body>
+
+</html>

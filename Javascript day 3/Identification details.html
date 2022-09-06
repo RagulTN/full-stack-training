@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        function AadharValidate() {
+        var aadhar = document.getElementById("txtAadhar").value;
+       
+        var adharSixteenDigit = /^\d{16}$/;
+        if (aadhar != '') {
+             
+            if (aadhar.match(adharSixteenDigit)) {
+                return true;
+            }
+            else {
+                alert("Enter valid Aadhar Number");
+                return false;
+            }
+        }
+        
+    }
+    function ValidatePAN() {
+            var txtPANCard = document.getElementById("txtPANCard").value;
+            
+            var regex = /([A-Z]){5}([0-9]){4}([A-Z]){1}$/;
+            if(txtPANCard != '')
+            {
+               if  (txtPANCard.match(regex)) {
+                return true;
+            } else {
+                alert("invalid pan number");
+                return false;
+            }  
+            }
+           
+        }
+
+
+
+    </script>
+    <center>
+        <form method="post">
+    <fieldset style="width:60%;">
+        <legend>Identification Details</legend>
+        <table class="table5" style=>
+            <tr>
+                <td id="adhaar" >Adhaar Card Number</td>
+                <td><input type="number" id="txtAadhar" onblur="AadharValidate();" required></td>
+                <td >Pan Card Number</td>
+                <td><input   name="txtPANCard" type="text" id="txtPANCard" class="PAN"  onblur="ValidatePAN();" required></td>
+                
+            </tr>
+            <tr>
+                <td><br>Upload Photo</td>
+                <td><br><input type="file"></td>
+                <td><br>Upload Signature</td>
+                <td><br><input type="file"> </td>
+            </tr>
+        </table>
+    </fieldset><br>
+    <div class="but" >
+        <input type="submit" value="Submit"  onclick="AadharValidate()" >
+        <input type="submit" value="back">
+    </div>
+
+    </div>
+</form>
+</center>
+</body>
+</html>
