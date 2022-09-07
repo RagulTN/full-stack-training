@@ -1,0 +1,34 @@
+<!DocType html>
+<html>
+<body>
+<script>
+class Student {
+    constructor()
+    {
+        this.id = 101;
+        this.name="Ram";
+    }  
+    disp()
+    {
+        var a = 50;
+        document.write("This is the base class");
+    } 
+}
+class Student1 extends Student
+{
+    constructor(dept)
+    {
+        super();
+        this.dept = dept;       
+    }  
+    
+}
+Student1.prototype.grade = "A";  
+var s = new Student1("IT");
+s.disp();
+//s.details1();
+document.writeln("<br/>"+s.id+" "+" "+s.name+" "+s.dept+" "+s.grade);
+</script>
+</body>
+</html>
+

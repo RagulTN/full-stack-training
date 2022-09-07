@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+//Declaring class
+class Employee
+  {    
+//Initializing an object
+    constructor(m1,m2)
+  {        
+      this.m1=m1;
+      this.m2=m2;  
+    }
+    detail()
+    {
+      var a,b,c;
+      a = this.m1;
+      b = this.m2;
+      c = (a+b)/2;
+
+  document.writeln("Mark1 : "+a+"<br>"+"Mark2 : "+b+"<br>"+"Average : "+c+"<br>")
+    }
+  }
+//passing object to a variable 
+//var e1=new Employee(a,b);
+var e2=new Employee(102,102);
+//e1.detail(); //calling method
+e2.detail();
+</script>
+</body>
+</html>

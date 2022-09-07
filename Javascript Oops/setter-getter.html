@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+class Stu
+{
+    getidnname()
+    {
+        return this.id+" "+this.name;
+
+    }
+    setidnname(id,name)
+    {
+        this.id=id;
+        this.name=name;
+    }    
+    }
+      Stu.prototype.dept="IT"
+      var st1 = new Stu();
+      st1.setidnname(101,"Ram");
+//st1.disp();  
+  var str = st1.getidnname();  
+  document.write(str+" "+st1.dept);
+        //document.writeln(st1.id+" "+st1.name+" "+st1.dept+"<br/>");
+
+</script>
+</body>
+</html>
