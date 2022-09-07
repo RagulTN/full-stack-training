@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Import in ES6</title>
+    </head>
+    <body>
+        <script type="module">
+  
+            // Default member first
+            import hello, { num_set, Greeting } from "./export.js";
+            console.log(num_set);
+            //document.write(num_set);
+
+            hello();
+            let g = new Greeting("ragul!!");
+            console.log(g.greeting);
+            
+            var doc = g.greeting;
+            console.log(doc);
+
+
+            //document.innerHTML('<p>g.greeting</p>');
+            //document.getElementById("name").innerHTML = g.greeting;
+
+            var container = document.getElementById("name");
+            var content = document.createElement("span");
+            content.innerHTML = g.greeting;
+            container.appendChild(content);
+
+        </script>
+    </body><p id="name"></p>
+</html>
