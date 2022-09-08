@@ -11,36 +11,37 @@
 
 	<h1><center>JavaScript Form Oops</center></h1>
 	<hr>
-			<div class="employee-form">
-                <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+			<div class="employee-form" id="form">
+                <form >
                     <div>
                         <label>Enter your Employee Id</label><label class="validation-error hide" id="fullNameValidationError">This field is required.</label>
-                        <input type="text" name="fullName" id="fullName">
+                        <input type="text" name="id" id="id">
                     </div>
                     <div>
                         <label>Name</label>
-                        <input type="text" name="email" id="email">
+                        <input type="text" name="name" id="fname">
                     </div>
                     <div>
                         <label>Department</label>
-                        <input type="text" name="salary" id="salary">
+                        <input type="text" name="department" id="department">
                     </div>
                     <div>
                         <label>Designation</label>
-                        <input type="text" name="salary" id="salary">
+                        <input type="text" name="des" id="des">
                     </div>
                     <div>
                         <label>Salary</label>
-                        <input type="text" name="city" id="city">
+                        <input type="text" name="Salary" id="salary">
                     </div>
                     <div  class="form-action-buttons">
                         <input type="submit" value="Submit">
                     </div>
                 </form>
 		</div>
+        
 		<br/>
 		<div class = "employees-table">
-                <table class="list" id="employeeList">
+                <table class="list" id="employeelist">
                     <thead>
                         <tr>
                             <th>Employee Id</th>
@@ -48,6 +49,7 @@
                             <th>Department</th>
                             <th>Designation</th>
                             <th>Salary</th>
+                            <th>Actions</th>
                         </tr>
                     </thead>
                     <tbody>

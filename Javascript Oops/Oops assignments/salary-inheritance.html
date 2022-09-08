@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+
+    class Employee
+    {
+        constructor()
+        {
+        this.dep="API-Development";
+        this.designation="Developer";
+        }
+       
+    }
+    class Developer extends Employee
+    {
+      constructor(salary)
+      {
+          super();
+          this.salary=salary;
+      }
+    }
+    var s1=new Developer("80000"); 
+    document.writeln(" Team : " + s1.dep + ";    Designation : " +s1.designation+";     Salary : " +s1.salary);
+    document.writeln("<br>");
+    
+
+
+    class Designer extends Employee
+    {
+      constructor(salary)
+      {
+          super();
+          this.designation = "Designer";
+          this.salary=salary;
+      }
+    }
+    var s1=new Designer("50000");
+    document.writeln(" Team : " + s1.dep + ";    Designation : " +s1.designation+";     Salary : " +s1.salary);
+
+</script>
+<body>
+    
+</body>
+</html>

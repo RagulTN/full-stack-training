@@ -1,0 +1,105 @@
+<head>
+    <script type="text/javascript">
+ function TotalMarks()
+
+ {           
+    
+        class Average
+        {
+            constructor(m1,m2,m3,m4,m5)
+            {
+                this.m1=m1;
+                this.m2=m2;
+                this.m3=m3;
+                this.m4=m4;
+                this.m5=m5;
+            }
+            details()
+            {
+                this.m1=a;
+                this.m2=b;
+                this.m3=c;
+                this.m4=d;
+                this.m5=e;
+                var mark=a+b+c+d+e;
+                 avg=mark/5;
+                document.writeln("Mark1  :"+a);
+                document.write("<br>");
+                document.writeln("Mark2:"+b);
+                document.write("<br>");
+                document.writeln("Mark3:"+b);
+                document.write("<br>");
+                document.writeln("Mark4:"+b);
+                document.write("<br>");
+                document.writeln("Mark5:"+b);
+                document.write("<br>");
+                document.writeln("Average:"+avg);
+                document.write("<br>");
+
+            }
+            grade()
+            {
+                 try{
+                    if (avg <= 60) 
+                    {
+                            document.write(" Grade : F");
+                    }
+                    else if (avg <= 70 && avg>60) 
+                    {
+                            document.write("Grade : D");
+                    }
+                    else if (avg <= 80 && avg>70) 
+                    {
+                            document.write("Grade : C");
+                    } else if(avg <= 90 && avg>80)
+                    {
+                            document.write("Grade : B");
+                    } else if(avg <= 100 && avg>90) 
+                    {
+                            document.write("Grade : A");
+                    }  
+                                        
+            }
+            catch(e)
+                    {
+                    alert("There is error which shows ;"+e.message);
+                    }
+            }
+        }
+
+        var avg=new Average(a,b,c,d,e);
+        var avg;
+        var a = parseInt(document.getElementById("mark1").value);
+        var b = parseInt(document.getElementById("mark2").value);
+        var c = parseInt(document.getElementById("mark3").value);
+        var d = parseInt(document.getElementById("mark4").value);
+        var e = parseInt(document.getElementById("mark5").value);
+        avg.details();
+        avg.grade(avg);
+
+         
+    }       
+     
+</script>
+</head>
+<body>
+    <label>MARK1</label>
+    <input type="number" id="mark1" name="mark1">
+    <br>
+    <label>MARK2</label>
+    <input type="number" id="mark2" name="mark2">
+    <br>
+    <label>MARK3</label>
+    <input type="number" id="mark3" name="mark3">
+    <br>
+    <label>MARK4</label>
+    <input type="number" id="mark4" name="mark4">
+    <br>
+    <label>MARK5</label>
+    <input type="number" id="mark5" name="mark5">
+    <br>
+    <button id="btn" type="submit"  onclick="TotalMarks();">Submit</button>
+</body>
+
+</html>
+
