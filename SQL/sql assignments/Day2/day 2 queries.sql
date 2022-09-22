@@ -31,8 +31,7 @@ CREATE TABLE `management`.`developer` (
 SELECT * FROM management.company;
 ALTER TABLE `management`.`company` 
 DROP COLUMN `companycol2`,
-DROP COLUMN `companycol1`,
-DROP COLUMN `companycol`,
+
 ADD COLUMN `project_name` VARCHAR(45) NULL AFTER `fk_project_id`,
 CHANGE COLUMN `developers_id` `fk_developers_id` INT NOT NULL ,
 CHANGE COLUMN `pay_customer_id` `fk_pay_customer_id` INT NOT NULL ,
