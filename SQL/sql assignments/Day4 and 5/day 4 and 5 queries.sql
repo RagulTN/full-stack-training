@@ -107,11 +107,13 @@ SELECT * FROM day3.lms_members where date_expire>'2013-04-04';
 SELECT supplier_id,supplier_name,coalesce(contact, email) as 'CONTACT DETAILS' FROM day3.lms_supplier_details;
 SELECT * FROM day3.pms_book_details where publication='prentice hall' and year(publish_date)='1999';
 
+
 #Day 5 assesment
 SELECT * FROM day3.pms_manufacturing where prod_expiry_date<'2012-10-31';
 SELECT product_id,max(quantity) FROM day3.pms_manufacturing ;
 SELECT product_id, datediff(prod_expiry_date, prod_manu_date) as 'Available days' FROM day3.pms_manufacturing;
-
+                  
+#5 6
 SELECT category,count(category) FROM day3.pms_book_details group by(category) having count(category) order by count(category);
 SELECT category,count(category) FROM day3.pms_book_details group by(category) having count(category)>2;
 
@@ -121,14 +123,58 @@ SELECT b.book_code,b.book_title,s.supplier_name,b.author,b.price_num FROM day3.p
  
 SELECT * FROM day3.lms_members where membership_status='temporary' order by(city);
 
+# 9 10 11 12 13
+SELECT product_id, rank() over( order by product_id) as rank_no FROM day3.pms_manufacturing;
+
+#10- salesregion which has affected the maximum sales
+SELECT sales_region,sum(sales_amt) as sales_art from day3.pms_sales group by sales_region order by sales_region desc limit 1;
+
+#11- information about the department which has the maximum number of employees
+SELECT * FROM day3.department_details;
+select department_name, max(mycount)
+from (select d.department_name,count(d.department_name) as mycount from
+day3.pms_employee_details e join day3.department_details d on e.department_id = d.department_id 
+group by department_name order by department_name) count;
+
+#12 - information about the type of account
+INSERT INTO `day3`.`emp_account` (`acc_no`, `acc_type`, `acc_opendate`) VALUES ('100', 'regular', '2022-04-25');
+INSERT INTO `day3`.`emp_account` (`acc_no`, `acc_type`, `acc_opendate`) VALUES ('101', 'joint', '2022-04-25');
+INSERT INTO `day3`.`emp_account` (`acc_no`, `acc_type`, `acc_opendate`) VALUES ('102', 'regular', '2022-04-25');
+INSERT INTO `day3`.`emp_account` (`acc_no`, `acc_type`, `acc_opendate`) VALUES ('103', 'joint', '2022-04-25');
+INSERT INTO `day3`.`emp_account` (`acc_no`, `acc_type`, `acc_opendate`) VALUES ('104', 'regular', '2022-04-25');
+
+SELECT * FROM day3.emp_account;
+
+select acc_type,max(same_account) from (select acc_type,count(acc_type) as same_account from day3.emp_account group by acc_type) account;
+
+#13- information about the product which has the maximum profit margin
+ALTER TABLE `day3`.`pms_product` 
+ADD COLUMN `cost_price` INT NULL AFTER `department_id`,
+ADD COLUMN `selling_price` INT NULL AFTER `cost_price`;
+
+SELECT * FROM day3.pms_product;
+
+#13
+SELECT *, selling_price-cost_price as 'max profit' FROM day3.pms_product where selling_price-cost_price in 
+(select max(selling_price-cost_price) from day3.pms_product);
+
 CREATE TABLE `day3`.`sales` (
   `sales_id` INT NOT NULL,
   `sales_region` VARCHAR(45) NULL,
   `sales_person` VARCHAR(45) NULL,
   `sales_amt` INT NULL,
   PRIMARY KEY (`sales_id`));
+  
+CREATE TABLE `day3`.`emp_account`(
+  `acc_no` INT NOT NULL,
+  `acc_type` VARCHAR(45) NULL,
+  `acc_opendate` DATE NULL,
+  PRIMARY KEY (`acc_no`));
 
 SELECT manufacture_id, product_id, unit_id FROM day3.pms_manufacturing ;
 
-SELECT * FROM day3.pms_employee_details where max(designation) group by(designation);
+SELECT a.* FROM day3.pms_employee_details a inner join (select emp_id, max(designation) designation from day3.pms_employee_details
+ group by(emp_id));
+
+SELECT * FROM day3.department_details WHERE department_id NOT IN (select department_id FROM day3.employee_details);
 
