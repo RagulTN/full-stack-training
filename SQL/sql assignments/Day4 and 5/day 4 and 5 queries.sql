@@ -130,10 +130,10 @@ SELECT product_id, rank() over( order by product_id) as rank_no FROM day3.pms_ma
 SELECT sales_region,sum(sales_amt) as sales_art from day3.pms_sales group by sales_region order by sales_region desc limit 1;
 
 #11- information about the department which has the maximum number of employees
-SELECT * FROM day3.department_details;
+SELECT * FROM day3.pms_department_details;
 select department_name, max(mycount)
 from (select d.department_name,count(d.department_name) as mycount from
-day3.pms_employee_details e join day3.department_details d on e.department_id = d.department_id 
+day3.pms_employee_details e join day3.pms_department_details d on e.department_id = d.department_id 
 group by department_name order by department_name) count;
 
 #12 - information about the type of account
@@ -145,7 +145,8 @@ INSERT INTO `day3`.`emp_account` (`acc_no`, `acc_type`, `acc_opendate`) VALUES (
 
 SELECT * FROM day3.emp_account;
 
-select acc_type,max(same_account) from (select acc_type,count(acc_type) as same_account from day3.emp_account group by acc_type) account;
+select acc_type,max(same_account) from (select acc_type,count(acc_type) as same_account
+ from day3.emp_account group by acc_type) account;
 
 #13- information about the product which has the maximum profit margin
 ALTER TABLE `day3`.`pms_product` 

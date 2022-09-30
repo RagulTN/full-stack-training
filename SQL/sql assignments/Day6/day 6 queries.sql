@@ -66,3 +66,6 @@ join day3.pms_product p on e.department_id=d.department_id and e.manager_code=m.
 group by p.product_name;
 
 #12
+select book_issue_no, date_issue, date_return, date_returned, date_register, date_expire, book_title, category, author, price, fine_range 
+from  day3.lms_book_issue bi join day3.lms_members m  join day3.lms_fine_details bd join day3.lms_fine_details f 
+on bi.member_id=m.member_id and bi.book_code=bd.book_code and bi.fine_range=f.fine_range group by book_issue_no;
