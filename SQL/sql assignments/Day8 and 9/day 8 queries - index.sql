@@ -228,6 +228,7 @@ create view Java_Books as
 select b.book_title, m.member_id, m.member_name, m.city from  day3.pms_book_details b join day3.lms_members m
 on b.member_id = m.member_id where book_title='java';
 
+
 select * from Java_Books; 
 
 #5
