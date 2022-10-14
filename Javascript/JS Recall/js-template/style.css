@@ -1,0 +1,7 @@
+.title {
+    color: blue !important;
+  }
+  
+  art-card:nth-child(even) {
+    --description-color: #311B92;
+  }

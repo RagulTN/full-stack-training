@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - (img, video) background fadeout</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<section>
+<video src="videoplayback.mp4" autoplay="" muted="" loop=""></video>
+</section>
+<section>
+  <div class="content">
+    <h2>Why Brimma ?</h2>
+    <p>Our innovations are born at the intersection of Deep Mortgage Business Domain Experience & Technology Design/Delivery Ingenuity. Our approach is
+      simple and proven.
+      <br>
+      <br>
+      🎉Leverage decades of mortgage business domain experience to quickly identify and document lender process choke points.
+      <br>
+      <br>
+      🎉Tap into our 20+ year record of successfully integrating complex disparate technology stacks across mortgage and servicing.
+      <br>
+      <br>
+      🎉Assemble high-performing technical teams and disciplined project management to inspire and deliver game-changing solutions.</p>
+  </div>
+</section>
+<div onclick="closePopup()">
+  <button class="button button-1" onclick="togglePopup1(event)">Cancel</button>
+  <button class="button button-1" onclick="togglePopup2(event)">Accept</button>
+</div>
+<section class="popup popup1 bottom-right hide" onclick="event.stopPropagation()">
+  <p>Thank you!</p>
+</section>
+<section class="popup popup2 top-right hide" onclick="event.stopPropagation()">
+  <p>Come back soon.</p>
+</section>
+  <script  src="./script.js"></script>
+</body>
+</html>

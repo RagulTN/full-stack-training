@@ -1,0 +1,88 @@
+body{
+    height: 100vh;
+    background: linear-gradient(
+      to bottom ,
+      black 0%,
+      black 60%,
+      gold 50%,
+      gold 100%
+    ); 
+  }
+
+  .logo{
+    padding-left: 10%;
+    margin-top:3%;
+    margin-left: 4%;
+    height:210px;
+    width:250px;
+    position: relative;
+  }
+ 
+  .title{
+    margin-top:-16%;
+    margin-left:30%;
+    font-size: 150px;
+    font-family: sans-serif;
+    border-radius: 0%;
+    color: white;
+    padding: 0%;
+    border: 0ch;
+    font-weight: 700;
+    font-size: 30vh;
+  }
+    
+  .subtitle{
+    top: -48%;
+    margin-left:31%;
+    font-family: sans-serif;
+    letter-spacing: 19px;
+    font-size: 40px;
+    color: white;
+    margin-top: -20px;
+    position: relative;
+  }
+
+  .address1{
+    top: -9%;
+    float: left;
+    margin-left: 10%;
+    text-align: justify;
+    font-size: 30px;  
+    font-family: sans-serif;
+    position: relative;
+ }
+
+  .address2{
+    top: -9%;
+    float: right;
+    margin-right: 10%;
+    font-size: 30px;
+    font-family: sans-serif;
+    position: relative;
+  }
+ 
+
+@media screen and (max-width: 480px) {
+  .title {
+      font-size: 40px;
+  }
+  .InnCen {
+      font-size: 10px;
+      position: absolute;
+      left: 36%;
+      top: 34%;
+      letter-spacing:1mm;
+  }
+  img {
+      width: 60px;
+      height: 60px;
+  }
+  .Bot-left {
+      font-size: small;
+  }
+  .Bot-Right {
+      font-size: small;
+  }
+}
+
+    

@@ -56,7 +56,7 @@ END IF;
 set a = a + x;
 IF (x mod 2) THEN iterate loop_label;
 ELSE 
-SET 
+SET
   sum = sum + x;
 END IF;
 END LOOP;
