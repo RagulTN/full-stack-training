@@ -1,3 +1,4 @@
+----------------- example --------------
 use day3;
 create table customer (acc_no integer primary key,
 		cust_name varchar(20),
@@ -20,6 +21,7 @@ end; //
 update customer set avail_balance = avail_balance + 3000 where acc_no = 1001;
 select *from mini_statement;
 
+----------------------------------------
 # 1st question
 CREATE TABLE `day3`.`emp_details` (
   `emp_id` INT NOT NULL,
@@ -43,8 +45,10 @@ begin
 insert into day3.log_emp_details values( new.emp_id,new.salary,sysdate());
 end; //
 
+-- shows inserted date with time and date in the log_emp table
 insert into day3.emp_details values( 100, 'ragul', 'sid', 10, 50000, 1000);
 
+------------------------------------------
 #2nd question
 CREATE TABLE `day3`.`student_master` (
   `stu_id` INT NOT NULL,
@@ -61,10 +65,14 @@ create trigger student_update_trigger
 after update on day3.student_master for each row
 begin
 insert into day3.student_log values( new.stu_id,sysdate());
-end; //
+end; $$
+ //
 
+-- returns updated time and date in the students log table
+update day3.student_master set stu_class=5 where stu_id=1912021;
 drop trigger student_update_trigger;
 
+----------------------------------------------------
 #3rd question
 CREATE TABLE `day3`.`stu_marks` (
   `stu_id` INT NOT NULL,
@@ -77,4 +85,20 @@ CREATE TABLE `day3`.`stu_marks` (
   `per_marks` INT NULL,
   `grade` INT NULL,
   PRIMARY KEY (`stu_id`));
+
+delimiter //
+create trigger mark_percent
+before update on stu_marks 
+for each row
+	if(new.per_marks > 50) then
+    set new.grade='p';
+    else
+    set new.grade='f';
+    end if;
+end ; $$
+ //
+drop trigger mark_percent;
+
+-- sets grade according to total when updating table
+update stu_marks set per_marks=total/5 where stu_id=10;
 
