@@ -108,7 +108,7 @@ SELECT RIGHT(phone_no, 4) as last_digits FROM day7.employees;
 SELECT job_name, SUBSTR(job_name,1, INSTR(job_name, ' ')-1) as more_than_one_words FROM day7.jobs;
 
 #11
-SELECT firstname, lastname FROM day7.employees WHERE INSTR(lastname,'C') > 2;
+SELECT length(firstname) FROM day7.employees WHERE INSTR(lastname,'C') > 2;
 
 #12
 SELECT firstname "Name", LENGTH(firstname) "Length_of_names" FROM day7.employees WHERE firstname LIKE 'A%' 

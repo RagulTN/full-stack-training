@@ -61,13 +61,16 @@ CREATE TABLE `day3`.`student_log` (
   PRIMARY KEY (`stu_id`));
 
 delimiter //
-create trigger student_update_trigger
+create trigger student_update_ trigger
 after update on day3.student_master for each row
 begin
-insert into day3.student_log values( new.stu_id,sysdate());
+declare sid int;
+select stu_id into sid from day3.student_master;
+insert into day3.student_log values(sid,sysdate());
 end; $$
  //
 
+drop trigger student_update_trigger;
 -- returns updated time and date in the students log table
 update day3.student_master set stu_class=5 where stu_id=1912021;
 drop trigger student_update_trigger;

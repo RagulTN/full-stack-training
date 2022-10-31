@@ -175,7 +175,7 @@ CREATE TABLE `day3`.`emp_account`(
 SELECT manufacture_id, product_id, unit_id FROM day3.pms_manufacturing ;
 
 SELECT a.* FROM day3.pms_employee_details a inner join (select emp_id, max(designation) designation from day3.pms_employee_details
- group by(emp_id));
+ group by(emp_id)) ;
 
 SELECT * FROM day3.department_details WHERE department_id NOT IN (select department_id FROM day3.employee_details);
 

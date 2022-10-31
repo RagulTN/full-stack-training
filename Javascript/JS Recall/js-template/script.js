@@ -7,7 +7,7 @@ artCardTemplate.innerHTML = `
         display: grid;
         grid-template:
           "image title subtitle" auto /
-          "address1 address2" auto /
+          "description email" auto /
           25% 1fr;
         gap: 1rem;
         border-radius: .5rem;
@@ -25,6 +25,8 @@ artCardTemplate.innerHTML = `
         font-size: 100px;
         color: #263238;
         font-family:sans-serif;
+        margin-top:-2%;
+
       }
 
       .subtitle {
@@ -34,34 +36,38 @@ artCardTemplate.innerHTML = `
         font-size: 40px;
         color: #263238;
         font-family:sans-serif;
+        margin-top:10%;
+        margin-left:0.5%;
+        position:relative;
       }
 
-      .address1 {
+      .description {
         margin-top:30%;
-        grid-area: address1;
+        grid-area: description;
         font-size: 1.2rem;
         line-height: 1.5;
-        color: var(--address1-color, black);
+        color: var(--description-color, black);
       }
 
-      .address2 {
+      .email {
         margin-top:40%;
-        grid-area: address2;
+        grid-area: email;
         font-size: 1.2rem;
         line-height: 1.5;
-        color: var(--address1-color, black);
+        color: var(--description-color, black);
+        font-weight: bold;
       }
 
       </style>
       <img src="https://picsum.photos/300?image=83" alt="" class="image" />
       <h1 class="title">Title</h1>
       <h2 class="subtitle">Subtitle</h2>
-      <p class="address1">address1</p>
-      <p class="address2">address1</p>
+      <p class="description">description</p>
+      <p class="email">description</p>
 
       `
 
-class ArtCard extends HTMLElement {
+class BrimCard extends HTMLElement {
   constructor() {
     super()
 
@@ -73,19 +79,19 @@ class ArtCard extends HTMLElement {
     let image = this.shadowRoot.querySelector('.image')
     let title = this.shadowRoot.querySelector('.title')
     let subtitle = this.shadowRoot.querySelector('.subtitle')
-    let address1 = this.shadowRoot.querySelector('.address1')
-    let address2 = this.shadowRoot.querySelector('.address2')
+    let description = this.shadowRoot.querySelector('.description')
+    let email = this.shadowRoot.querySelector('.email')
 
 
     // Add data from attributes (props) to our Shadow elements
     image.setAttribute('src', this.getAttribute('image') || 'https://picsum.photos/300?image=83')
     title.innerHTML = this.getAttribute('title') || 'Title'
     subtitle.innerHTML = this.getAttribute('subtitle') || 'subtitle'
-    address1.innerHTML = this.getAttribute('address1') || 'address1'
-    address2.innerHTML = this.getAttribute('address2') || 'address2'
+    description.innerHTML = this.getAttribute('description') || 'description'
+    email.innerHTML = this.getAttribute('email') || 'email'
 
   }
 }
 
-// Register the ArtCard element as `<brimma-card />` in the browser
-customElements.define('brimma-card', ArtCard)
+// Register the BrimCard element as `<brimma-card />` in the browser
+customElements.define('brimma-card', BrimCard)

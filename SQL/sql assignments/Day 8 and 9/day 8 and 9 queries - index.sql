@@ -50,6 +50,9 @@ ALTER TABLE `day8`.`borrows`
 ADD INDEX `student_id_idx` (`student_id` ASC) VISIBLE,
 ADD INDEX `book_id_idx` (`book_id` ASC) VISIBLE;
 ;
+
+show index from day8.books;
+
 ALTER TABLE `day8`.`borrows` 
 ADD CONSTRAINT `student_id`
   FOREIGN KEY (`student_id`)
