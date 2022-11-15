@@ -66,7 +66,7 @@ class Saving extends Account {
         System.out.println("Total Amount is :" + o_Price);
 
     }
-    public void check_intrest() {
+    public void check_interest() {
 
         intr = (o_Price * 2) / 100;
         o_Price = o_Price + intr;
@@ -145,7 +145,7 @@ public class BankApplication {
                         sav.withdraw_Bal();
                         break;
                     case 4:
-                        sav.check_intrest();
+                        sav.check_interest();
                         break;
                     case 5:
                         System.exit(0);

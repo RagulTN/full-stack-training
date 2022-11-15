@@ -30,6 +30,17 @@ public class ArrayFunctions {
             }
         }
         System.out.println("Maxmium number in the array : " + max);
+
+        //3rd
+
+        //4th
+        System.out.println("Length of the array : " + arr.length);
+
+        //5th
+        for(int i= arr.length-1;i>=0;i--)
+        {
+            System.out.print(arr[i]+" ");
+        }
     }
 
 }
