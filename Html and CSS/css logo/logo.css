@@ -1,0 +1,66 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+  }
+  h1 {
+    color:#333;
+    font-weight:700;
+    font-size:30px;
+    text-align:center;
+    margin-top: 100px;
+    
+  }
+  .wrapper {
+    background: black;
+    width:400px;
+    height:400px;
+    margin-top: 30px;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius:10px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+  }
+  .drop {
+    width: 200px;
+    height: 200px;
+    border-radius: 0 50% 50% 50%;
+    transform: rotate(45deg);
+    margin-top: 20px;
+    background-color: #fff;
+  }
+  .bcircle{
+    width: 140px;
+    height: 140px;
+    border-radius: 50% 50% 50% 50%;
+    transform: rotate(45deg);
+    margin-top: 17%;
+    margin-left: 16%;
+    background-color: black;
+    position: absolute;
+  }
+
+  .centerdot{
+    width: 50px;
+    height: 50px;
+    border-radius: 50% 50% 50% 50%;
+    transform: rotate(45deg);
+    margin-top: 80px;
+    margin-left: 40%;
+    background-color: #fff;
+    position: absolute;
+    z-index: 1;
+  }
+
+  .rectangle{
+    height: 110px;
+    width: 48px;
+    background-color: wheat;
+    transform: rotate(134deg);
+    position: absolute;
+    background-color: black;
+    margin-left:-0.4% ;
+    margin-top:18% ;
+  }

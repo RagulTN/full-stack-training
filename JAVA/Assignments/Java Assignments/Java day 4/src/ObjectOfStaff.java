@@ -10,22 +10,16 @@ class Staff2
         code= sc.nextInt();
         System.out.print("Enter The Name : ");
         name=sc.next();
-
     }
     public void get_info()
     {
         System.out.println("  Code :"+code);
         System.out.println("  Name :"+name);
     }
-
-
 }
 class Teacher2 extends Staff2
 {
     String sub;int publication;
-
-
-
     public void set_details()
     {
 
@@ -41,7 +35,6 @@ class Teacher2 extends Staff2
         System.out.println(" Subject :"+sub);
         System.out.println("Publication :"+publication);
     }
-
 }
 class Officer2 extends Staff2
 {
@@ -72,12 +65,10 @@ class Typist2 extends Staff2
         System.out.println(" Code :"+code);
         System.out.println(" Name :"+name);
         System.out.println("speed :"+speed);
-
     }
 }
 public class ObjectOfStaff
 {
-
     public static void main(String[] args)
     {
         Teacher2 t1=new Teacher2();
@@ -99,6 +90,5 @@ public class ObjectOfStaff
         Ty.set_Speed();
         System.out.println("------------About Typist-----------");
         Ty.show();
-
     }
 }

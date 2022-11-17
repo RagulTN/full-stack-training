@@ -15,7 +15,7 @@ public class ArrayFunctions {
 
         //1st
         int min = arr[0] ;
-        for (int i = 0; i < arr.length ; i++) {
+        for (int i = 0; i < arr.length ; i++){
             if(arr[i]<min){
                 min = arr[i];
             }
@@ -32,6 +32,7 @@ public class ArrayFunctions {
         System.out.println("Maxmium number in the array : " + max);
 
         //3rd
+        //ArrayMerge and Sort
 
         //4th
         System.out.println("Length of the array : " + arr.length);
@@ -42,5 +43,4 @@ public class ArrayFunctions {
             System.out.print(arr[i]+" ");
         }
     }
-
 }
