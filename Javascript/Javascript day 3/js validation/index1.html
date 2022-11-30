@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title> Form validation</title>
+<link rel="stylesheet" href="style.css">
+<script>
+// Defining a function to display error message
+function printError(elemId, hintMsg) {
+    document.getElementById(elemId).innerHTML = hintMsg;
+}
+
+// Defining a function to validate form 
+var regexemail = /^\S+@\S+\.\S+$/; 
+var regexname = /^[a-zA-Z\s]+$/; 
+var regexMobile = /^[1-9]\d{8}$/;
+
+
+function newval(id,value){
+	if(id == "email"){
+		if(value == " ") {
+			printError("emailErr", "Please enter your email address");
+		} else {
+			alert("invalid data")
+		}
+	}
+	
+}
+</script>
+</head>
+<body>
+<form name="contactForm" onsubmit="return validateForm()" method="post">
+<h2>Student Registration Form</h2>
+<div class="row">
+ <label>Name</label>
+<input type="text" name="name" onkeydown="newval('your',this.value)">
+<div class="error" id="yourErr"></div>
+</div>
+
+<div class="row">
+    <label>Father Name</label>
+   <input type="text" name="fname" onkeydown="newval('father',this.value)">
+   <div class="error" id="fatherErr"></div>
+   </div>
+   <div class="row">
+ <label>Mother Name</label>
+<input type="text" name="Mname" onkeydown="newval('mother',this.value)">
+<div class="error" id="motherErr"></div>
+</div>
+<div class="row">
+<label>Gender</label>
+<div class="form-inline">
+<label><input type="radio" name="gender" value="male"> Male</label>
+<label><input type="radio" name="gender" value="female"> Female</label>
+</div>
+<div class="error" id="genderErr"></div>
+</div>
+<div class="row">
+<label>Email Address</label>
+<input type="text" name="email" onkeydown="newval('email',this.value)">
+<div class="error" id="emailErr"></div>
+</div>
+<div class="row">
+<label>Mobile Number</label>
+<input type="text" name="mobile" onkeydown="newval('mobile',this.value)" maxlength="10">
+<div class="error" id="mobileErr"></div>
+</div>
+<div class="row">
+<label>Department</label>
+<select name="country" onchange="newval('country',this.value)">
+<option>Select</option>
+<option>CSE</option>
+<option>IT</option>
+<option>ECE</option>
+<option>EEE</option>
+</select>
+<div class="error" id="countryErr"></div>
+</div>
+<div class="row">
+<label>Skills Known <i>(Optional)</i></label>
+<div class="form-inline">
+<label><input type="checkbox"  name="langs[]" value="sports"> Java</label>
+<label><input type="checkbox" name="langs[]" value="movies"> React</label>
+<label><input type="checkbox" name="langs[]" value="music"> React Native</label>
+<label><input type="checkbox" name="langs[]" value="music"> Java Script</label>
+<label><input type="checkbox" name="langs[]" value="music"> Python</label>
+<label><input type="checkbox" name="langs[]" value="music"> C</label>
+<label><input type="checkbox" name="langs[]" value="music"> C++</label>
+</div>
+</div>
+<div class="row">
+<div class="form-inline"><input type="checkbox" name="terms"> I accept the <u>Terms and Conditions</u></div>
+<div class="error" id="termErr"></div>
+</div>
+<div class="row">
+<input type="submit" value="Submit">
+</div>
+</form>
+</body>
+</html>

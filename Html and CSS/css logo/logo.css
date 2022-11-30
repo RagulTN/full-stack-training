@@ -2,6 +2,8 @@ body {
     margin: 0;
     padding: 0;
     box-sizing:border-box;
+    overflow:hidden;
+
   }
   h1 {
     color:#333;
@@ -9,7 +11,7 @@ body {
     font-size:30px;
     text-align:center;
     margin-top: 100px;
-    
+    display: block;
   }
   .wrapper {
     background: black;
@@ -22,6 +24,8 @@ body {
     display: flex;
     justify-content: center;
     align-items:center;
+    display: flex
+
   }
   .drop {
     width: 200px;
@@ -30,6 +34,7 @@ body {
     transform: rotate(45deg);
     margin-top: 20px;
     background-color: #fff;
+    display: flex;
   }
   .bcircle{
     width: 140px;
@@ -40,6 +45,7 @@ body {
     margin-left: 16%;
     background-color: black;
     position: absolute;
+    display: flex;
   }
 
   .centerdot{
@@ -52,15 +58,21 @@ body {
     background-color: #fff;
     position: absolute;
     z-index: 1;
+    display: flex;
   }
 
   .rectangle{
     height: 110px;
     width: 48px;
-    background-color: wheat;
+    background-color: black;
     transform: rotate(134deg);
     position: absolute;
     background-color: black;
     margin-left:-0.4% ;
     margin-top:18% ;
+    display: flex;
+    border-bottom-right-radius: 80px;
   }
+  
+
+  

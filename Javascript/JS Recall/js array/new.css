@@ -1,0 +1,43 @@
+ 
+
+    .Main{
+         /* background-image:  linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("BACKG.jpeg");  */
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        overflow: hidden;
+        margin-top: 25%;
+        
+
+    }
+    .card {
+
+        background-image:  linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("BACKG.jpeg"); 
+      padding: 1rem;
+      border: 1px solid whitesmoke;
+      margin: 1rem;
+      width: 30%;
+      color: aliceblue;
+      word-spacing: 0.2cm;
+       
+    }
+    
+    .card:hover {
+               box-shadow: 0 8px 16px 0 orangered;
+    } 
+    .table
+    {
+        width: 50%;
+        border-collapse: collapse;
+        text-align: center;
+         text-align: left;
+     }
+     
+     
+    
+     
+    
+    
+
+  
+  
