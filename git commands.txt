@@ -1,0 +1,10 @@
+git add .
+git commit -m "changes in java assesments, js, css designs"
+git push origin main
+
+
+------ npm server starting (For Angular projects) -------
+npm ng serve
+ng serve
+npm run
+npm start

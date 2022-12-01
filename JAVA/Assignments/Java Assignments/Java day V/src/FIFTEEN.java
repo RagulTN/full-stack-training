@@ -18,7 +18,6 @@ public class FIFTEEN {
     {
         B obj= new B();
         obj.Hello();
-
         A obj1=new B();
         obj1.Hello();
      }

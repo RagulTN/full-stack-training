@@ -1,2 +1,9 @@
-package TYBCA;public class Subject {
+package TYBCA;
+
+public class Subject {
+
+}
+
+class Marks{
+
 }
