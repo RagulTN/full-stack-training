@@ -32,3 +32,5 @@ function sumExpense2(tiffen, lunch, petrol){
 }
 
 console.log(sumExpense2(60,200,99,100,150,50));
+
+
