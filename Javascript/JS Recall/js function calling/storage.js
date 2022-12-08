@@ -1,5 +1,5 @@
 
-//local storage , session storage and cookies
+//local storage , session storage and cookies in js
 
 localStorage.setItem('name', 'ragul');
 console.log(localStorage.getItem('name'));
