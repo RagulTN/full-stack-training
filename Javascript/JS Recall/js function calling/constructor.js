@@ -12,7 +12,11 @@ function createPerson(name){   //camelCase
 
 //Constructor Functions
 
-function Person(){            //Pascal
-    
-
+function Person(name){            //Pascal
+    this.name = name;
+    this.greeting = function(){
+        console.log(`My Name is ${this.name}`)
+    }
 }
+
+let newperson = new Person("Ragul");
