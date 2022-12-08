@@ -8,3 +8,5 @@ npm ng serve
 ng serve
 npm run
 npm start
+
+git remote -v
