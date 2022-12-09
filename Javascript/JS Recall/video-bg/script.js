@@ -15,7 +15,7 @@ function togglePopup1(e) {
   // remove popup after 8 seconds
   setTimeout(() => {
     popup1.classList.toggle("hide");
-  }, "8000");
+  }, "2000");
 }
 
 function togglePopup2(e) {
@@ -24,7 +24,7 @@ function togglePopup2(e) {
   
   setTimeout(() => {
     popup2.classList.toggle("hide");
-  }, "8000");
+  }, "2000");
 }
 
 function closePopup() {
