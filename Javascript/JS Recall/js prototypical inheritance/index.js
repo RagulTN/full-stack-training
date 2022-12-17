@@ -48,11 +48,6 @@ function AfricanHamster(){
     this.Name = "Bruno"
 }
 
-function MexicanHamster(){
-    this.Name = "Mars"
-}
-
-
 AfricanHamster.prototype = new Hamster();
 let obj = new AfricanHamster();
 console.log(obj.HungrySound());
