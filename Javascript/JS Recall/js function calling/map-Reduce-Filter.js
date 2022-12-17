@@ -1,13 +1,4 @@
-//Notes
 //Map
-//Map is used when whole transformation occurs, 
-//Mapping each value, have mapping logic
-//Filter
-//filter is used when we want to filter the arrar to obtain required value.
-//Reduce
-//reduce is used when we want to reduce the array to single value eg (max, min, avg, sum, difference etc).
-//reduce passes two arguments one function(which includes accumulator and initial value as argument itself) and another initial value of accumulator.
-// use reduce when reducing values into a small amount
 
 const arr = [2, 1, 5, 10];
 
@@ -107,3 +98,25 @@ console.log(ages);
 //chaining
 const age45 = users.filter((x) => x.age == 45).map((x) => x.firstname);
 console.log(age45);
+
+const age40 = users.reduce(function(names, curr){
+    if(curr.age == 45){
+        names.push(curr.firstname)
+    }
+    return names;
+},[])
+
+console.log(age40);
+
+
+//Notes
+//Map
+//Map is used when whole transformation occurs, 
+//Mapping each value, have mapping logic
+//Filter
+//filter is used when we want to filter the arrar to obtain required value.
+//Reduce
+//reduce is used when we want to reduce the array to single value eg (max, min, avg, sum, difference etc).
+//reduce passes two arguments one function(which includes accumulator and initial value as argument itself) and another initial value of accumulator.
+// use reduce when reducing values into a small amount
+// using reduce conside two things - > what you need , how you need in the place of accumulator , current is just a iterator
