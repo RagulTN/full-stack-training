@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/JAVA/Assignments/Java Assignments/Java Assignments.iml" filepath="$PROJECT_DIR$/JAVA/Assignments/Java Assignments/Java Assignments.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JAVA/Assignments/Java Assignments/Java day 2/Java day 2.iml" filepath="$PROJECT_DIR$/JAVA/Assignments/Java Assignments/Java day 2/Java day 2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JAVA/Assignments/Java Assignments/Java day 3/Java day 3.iml" filepath="$PROJECT_DIR$/JAVA/Assignments/Java Assignments/Java day 3/Java day 3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JAVA/Assignments/Java Assignments/Java day 4/Java day 4.iml" filepath="$PROJECT_DIR$/JAVA/Assignments/Java Assignments/Java day 4/Java day 4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JAVA/Assignments/Java Assignments/Java day 6/Java day 6.iml" filepath="$PROJECT_DIR$/JAVA/Assignments/Java Assignments/Java day 6/Java day 6.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JAVA/Assignments/Java Assignments/Java day V/Java day V.iml" filepath="$PROJECT_DIR$/JAVA/Assignments/Java Assignments/Java day V/Java day V.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/full-stack-training.iml" filepath="$PROJECT_DIR$/.idea/full-stack-training.iml" />
+    </modules>
+  </component>
+</project>
