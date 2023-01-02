@@ -5,6 +5,7 @@
    <head>
       <meta charset="UTF-8">
       <title>Insert title here</title>
+      <p>File uploaded successfully in db</p>
    </head>
    <body></body>
 </html>
