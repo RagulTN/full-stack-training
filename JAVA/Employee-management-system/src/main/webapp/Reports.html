@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reports</title>
+    <link rel="icon" type="image/x-icon" href="1646025712126.jpg">
+</head>
+<style>
+     *
+    {
+        margin: 0px;
+        padding: 0px;
+        overflow: hidden;
+        font-family: sans-serif;
+        color: black;
+    }
+    .new {
+        height: 100vh;
+        width: 100%;
+        background-image: url("bg.jpg");
+        background-position: center;
+        background-size: cover;
+        overflow: hidden;
+    }
+    .new h1 {
+        color: black;
+        text-align: center;
+    }
+    input
+    {
+        color: black;
+        border-radius: 4px;
+    }
+    .button {
+        background-color: #4CAF50; /* Green */
+        border: none;
+        color: white;
+        padding: 5px 7px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+    }
+
+</style>
+<body> 
+    <div class="new">
+        <h1>Employee Management System</h1><br>
+        <hr color="skyblue" style="height: 2px ;width: 100%;color: aliceblue;">
+       
+        <center> <h3>Reports</h3>
+             <fieldset style="width: 70%; height: 100vh;">
+             <fieldset style="width: 80%;">
+                 <legend>View Leave Details</legend>
+             <table>
+                <tr>
+                    <td><br>
+                        
+                        <label>Employee Code</label>
+                    </td>
+                    <td colspan><br>
+                        &nbsp; &nbsp;&nbsp;  &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;  &nbsp; &nbsp;&nbsp;
+                        <input type="number" required>
+                    </td>
+                    <td colspan><br>
+                        &nbsp; &nbsp;&nbsp;  &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;  &nbsp; &nbsp;&nbsp;
+                        <label>Company Code</label>
+                    </td>
+                    <td colspan><br>
+                        &nbsp; &nbsp;&nbsp;  &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;  &nbsp; &nbsp;&nbsp;
+                        <input type="number" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td><br>
+                        
+                        <label>Leave From</label>
+                    </td>
+                    <td colspan><br>
+                        &nbsp; &nbsp;&nbsp;  &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;  &nbsp; &nbsp;&nbsp;
+                        <input type="date" required>
+                    </td>
+                    <td colspan><br>
+                        &nbsp; &nbsp;&nbsp;  &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;  &nbsp; &nbsp;&nbsp;
+                        <label>Leave To</label>
+                    </td>
+                    <td colspan><br>
+                        &nbsp; &nbsp;&nbsp;  &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;  &nbsp; &nbsp;&nbsp;
+                        <input type="date" required>
+                    </td>
+                </tr>
+             </table>
+             </fieldset>   
+             <a href="./view leave details.html" class="button">View</a>
+
+             <fieldset style="width: 80%;margin-top: 10%;">
+                <legend>View Loan Details</legend>
+            <table>
+               <tr>
+                   <td><br>
+                       
+                       <label>Employee Code</label>
+                   </td>
+                   <td colspan><br>
+                       &nbsp; &nbsp;&nbsp;  &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;  &nbsp; &nbsp;&nbsp;
+                       <input type="number" required>
+                   </td>
+                   <td colspan><br>
+                       &nbsp; &nbsp;&nbsp;  &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;  &nbsp; &nbsp;&nbsp;
+                       <label>Company Code</label>
+                   </td>
+                   <td colspan><br>
+                       &nbsp; &nbsp;&nbsp;  &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;  &nbsp; &nbsp;&nbsp;
+                       <input type="number" required>
+                   </td>
+               </tr>
+               <tr>
+                   <td><br>
+                       
+                       <label>loan type</label>
+                   </td>
+                   <td colspan><br>
+                       &nbsp; &nbsp;&nbsp;  &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;  &nbsp; &nbsp;&nbsp;
+                        <select>
+                            <option>Home</option>
+                            <option>Personal</option>
+                            <option>vehicle</option>
+                        </select>
+                   </td>
+                   
+               </tr>
+            </table>
+             
+            </fieldset>   
+            <a href="./loan detail.html" class="button">View</a>
+
+            <fieldset style="width: 80%;margin-top: 10%;">
+                <legend>View Salary Details</legend>
+            <table>
+               <tr>
+                   <td><br>
+                       
+                       <label>Employee Code</label>
+                   </td>
+                   <td colspan><br>
+                       &nbsp; &nbsp;&nbsp;  &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;  &nbsp; &nbsp;&nbsp;
+                       <input type="number" required>
+                   </td>
+                   <td colspan><br>
+                       &nbsp; &nbsp;&nbsp;  &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;  &nbsp; &nbsp;&nbsp;
+                       <label>Company Code</label>
+                   </td>
+                   <td colspan><br>
+                       &nbsp; &nbsp;&nbsp;  &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;  &nbsp; &nbsp;&nbsp;
+                       <input type="number" required>
+                   </td>
+               </tr>
+               <tr>
+                   <td><br>
+                       
+                       <label>Branch Code</label>
+                   </td>
+                   <td colspan><br>
+                       &nbsp; &nbsp;&nbsp;  &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;  &nbsp; &nbsp;&nbsp;
+                        <input type="number">
+                   </td>
+                   
+               </tr>
+            </table>
+             
+            </fieldset>  
+            <a href="./view salary details.html" class="button">View</a>
+            <a href="invoice.html"  class="button">invoice</a>
+        </fieldset>
+        </center></div>
+       
+    
+</body>
+</html
