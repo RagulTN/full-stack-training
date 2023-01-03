@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Upload Image</title>
+    </head>
+    <style>
+    .content{ 
+		max-width: max-content;
+		margin: auto;
+		padding: 0;
+		font-size: 31px;
+ 	 }
+</style>
+    <body>
+    <div class="content">
+        <b>Upload | <a href="view.jsp">View</a></b><br/><br/>
+        
+        <form action="UploadImage" method="post" enctype="multipart/form-data">
+            <input type="file" name="image" required="required"/><br/><br/>
+            <input type="submit"/>
+        </form>
+     </div>
+    </body>
+</html>
