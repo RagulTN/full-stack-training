@@ -9,7 +9,7 @@
 <body>
 <%
  String num1 = request.getParameter("num1");
- String num2 = request.getParameter("num1");
+ String num2 = request.getParameter("num2");
  int num11 = Integer.parseInt(num1);
  int num22 = Integer.parseInt(num2);
  int add = num11 + num22;
