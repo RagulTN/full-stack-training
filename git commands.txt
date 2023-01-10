@@ -13,4 +13,5 @@ git remote -v
 
 ----for new projects angular------
 
-ng new <project-name>
+install angular ->        npm install -g @angular/cli
+creating new projrcts ->  ng new <project-name>
