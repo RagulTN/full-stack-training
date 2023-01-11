@@ -4,6 +4,7 @@ selector: 'app-student',
 templateUrl: './student.component.html',
 styleUrls: ['./student.component.css']
 })
+
 export class StudentComponent {
 Name: string = 'Anurag';
 Branch: string = 'CSE';
