@@ -10,6 +10,5 @@ export class UserserviceService {
 
   getUserData(uname: string, pwd: string){
     return this.http.get('http://localhost:8080/user/'+uname+'/'+pwd)
-    // return this.http.get('http://localhost:8080/user/ragul/123')
   }
 }
