@@ -1,0 +1,31 @@
+<h1>Toggle div in Angular</h1>
+
+<button (click)="toggleTag()">Who am I?</button>
+
+<!-- <button (click)="toggleTag(btn2)" name="btn2">Who am I?</button> -->
+<div *ngIf="showMe">
+<h2 >Im a h2 Tag </h2>
+<div class='panel panel-primary'>  
+  <div class='panel-heading'>  
+      {{title}}  
+  </div>   
+  <div class='panel-body'>  
+      <div class='table-responsive'>  
+          <table class='table'>  
+              <thead>  
+                  <tr>  
+                      <th>Name</th>   
+                      <th>Birth Date</th>  
+                  </tr>  
+              </thead>  
+              <tbody>  
+                  <tr *ngFor="let bday of bdays;">  
+                      <td>{{bday.name}}</td>  
+                      <td>{{bday.bDate}}</td>  
+                  </tr>  
+              </tbody>  
+          </table>  
+      </div>  
+  </div>  
+</div>
+</div>
