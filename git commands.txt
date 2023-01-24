@@ -1,6 +1,7 @@
 git add .
 git commit -m "changes in java assesments, js, css designs"
 git push origin main
+cd .. -> go back directory
 
 
 ------ npm server starting (For Angular projects) -------
@@ -8,6 +9,7 @@ npm ng serve
 ng serve
 npm run
 npm start
+ng version
 
 git remote -v
 
@@ -15,3 +17,4 @@ git remote -v
 
 install angular ->        npm install -g @angular/cli
 creating new projrcts ->  ng new <project-name>
+new component -> ng g c newComponent
