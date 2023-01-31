@@ -1,0 +1,73 @@
+<p>
+    Welcome {{name}} from {{this.constructor.name}}
+    {{2+2}}
+</p>
+
+<h3>{{name.length}} {{name.toUpperCase()}}</h3>
+<h3>{{greetUser()}}</h3>
+
+<!-- <h3>{{a = 2+2}}</h3> //wrong -->
+
+<h3>{{siteUrl}}</h3>
+<!-- <h3>{{window.location.href}}</h3> //wrong template cant access system properities -->
+
+<input [id]="myId" type="text" value="ragul">&nbsp;
+<input bind-id="myId" type="text" value="ragul">&nbsp;
+<input class="text-sucess" type="text" value="ragul">&nbsp;
+<input class="sucessClass" type="text" value="ragul">&nbsp;   <!--not wrong-->
+<input id="{{myId}}" type="text" value="ragul">&nbsp;
+
+<button (click)="onClick($event)">Greet</button>
+{{greeting}}
+
+<input #myInput type="text" placeholder="template ref variable">
+<button (click)="logMessage(myInput.value)">Log</button><br>
+
+<input type="text" [(ngModel)] = "name1" placeholder="two way binding">
+{{name1}}
+
+<h3 *ngIf="true">Ragul</h3>  <!-- if false dom doesnt show even html code-->
+
+<h3 *ngIf="display; else elseBlock">Ragul</h3>
+<ng-template #elseBlock>     <!--then block can be used if true-->
+    <p>Name is hidden</p>
+</ng-template><br><hr>
+<h3>Dates</h3>
+
+<!-- <div [ngSwitch] = "color">
+    <div *ngSwitchCase="'red'">you Choose red color</div>
+    <div *ngSwitchCase="'green'">you Choose green color</div>
+    <div *ngSwitchCase="'blue'">you Choose blue color</div>
+    <div *ngSwitchDefault>pick again</div>
+</div> -->
+
+<!-- <div *ngFor="let color of colors;index as i">
+    <p>{{i}}.{{color}}</p>
+</div> -->
+
+<!-- <p>{{pipe | lowercase}}</p>
+<p>{{pipe | slice: 2}}</p> 
+<p>{{person | json }}</p>
+<p>{{4.5673 | number:'1.2-2' }}</p>
+<p>{{0.25 | percent }}</p>
+<p>{{0.25 | currency:'INR' }}</p> -->
+
+<p>{{ date | date:'short' }}</p>
+<p>{{ date | date:'shortDate' }}</p>
+<p>{{ date | date:'short' }}</p>
+<p>{{ date | date:'mediumDate' }}</p>
+
+
+
+<!-- $0.getAttribute("value") //to get properities of current selected item-->
+<!-- $0.value -->
+
+<!-- //getAttribute cant change once assigned in webpage, its html
+//properities (value) is DOM, can change
+//Value Attribute doesnt change where value properities can change
+//Property binding is binding actually binding data with dom not with Attribute
+//Property binding -> Property is in class which we binding in html
+// [] -- Property binding -- class to template
+// () -- event binding -- template to class
+// banana inside a box - two way binding -> [()]
+// Pipes -- allows us to transform data before showing in view -->
