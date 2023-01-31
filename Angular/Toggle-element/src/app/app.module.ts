@@ -3,8 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TestComponent } from './test/test.component';
@@ -35,4 +33,5 @@ import { DatePipe } from '@angular/common';
   providers: [DatePipe],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
