@@ -13,11 +13,18 @@ import { MatButtonModule } from '@angular/material/button';
 import { FormsModule } from '@angular/forms';
 import { DatePipe } from '@angular/common';
 
+import { HttpClientModule } from '@angular/common/http';
+import { EmpListComponent } from './emp-list/emp-list.component';
+import { EmployeeDetailComponent } from './employee-detail/employee-detail.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
     TestComponent,
-    DateTimeComponent
+    DateTimeComponent,
+    EmpListComponent,
+    EmployeeDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +35,8 @@ import { DatePipe } from '@angular/common';
     MatInputModule,
     MatButtonModule,
     MatNativeDateModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [DatePipe],
   bootstrap: [AppComponent]
