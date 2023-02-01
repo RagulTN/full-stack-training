@@ -8,6 +8,8 @@ import { EmployeeService } from '../employee.service';
 })
 export class EmployeeDetailComponent {
   public employees : any[] = [];
+  public errorMsg: any;
+
 
   constructor(private _employeeService : EmployeeService){}
 
@@ -15,9 +17,15 @@ export class EmployeeDetailComponent {
   //   this.employees = this._employeeService.getEmployees();
   // }
 
+  // ngOnInit(){
+  //   this._employeeService.getEmployees()
+  //       .subscribe(data => this.employees = data);
+  // }
+
   ngOnInit(){
     this._employeeService.getEmployees()
-        .subscribe(data => this.employees = data);
+        .subscribe(data => this.employees = data,
+                   error => this.errorMsg = error);
   }
 
 }
