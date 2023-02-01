@@ -6,12 +6,13 @@
     <li>{{employee.name}}</li>
 </ul>
 
-<ul *ngFor="let employee of employees">
-    <li>{{employee.id}}. {{employee.name}}. {{employee.age}}</li>
-</ul>
 
 <!-- 
 // define employee details service
 // register service in injector
 // declare dependency in emplist and empdetail
+// Service is responsible for providing data
+// Register your service in module level
+// You need to use this service instance (that is construtor) to fetch employee data
+// ngOnInit hook gets called when the component has initialzed
   -->

@@ -16,6 +16,7 @@ import { DatePipe } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { EmpListComponent } from './emp-list/emp-list.component';
 import { EmployeeDetailComponent } from './employee-detail/employee-detail.component';
+import { EmployeeService } from './employee.service';
 
 
 @NgModule({
@@ -38,7 +39,7 @@ import { EmployeeDetailComponent } from './employee-detail/employee-detail.compo
     FormsModule,
     HttpClientModule
   ],
-  providers: [DatePipe],
+  providers: [DatePipe, EmployeeService],
   bootstrap: [AppComponent]
 })
 
