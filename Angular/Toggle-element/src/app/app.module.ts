@@ -17,7 +17,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { EmpListComponent } from './emp-list/emp-list.component';
 import { EmployeeDetailComponent } from './employee-detail/employee-detail.component';
 import { EmployeeService } from './employee.service';
+import { QuoteShowComponent } from './quote-show/quote-show.component';
 
+import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,8 @@ import { EmployeeService } from './employee.service';
     TestComponent,
     DateTimeComponent,
     EmpListComponent,
-    EmployeeDetailComponent
+    EmployeeDetailComponent,
+    QuoteShowComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +40,8 @@ import { EmployeeService } from './employee.service';
     MatButtonModule,
     MatNativeDateModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxSkeletonLoaderModule
   ],
   providers: [DatePipe, EmployeeService],
   bootstrap: [AppComponent]
