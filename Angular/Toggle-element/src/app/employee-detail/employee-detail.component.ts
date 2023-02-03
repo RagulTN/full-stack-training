@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { Subscription } from 'rxjs';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { count, interval, Subscription } from 'rxjs';
 import { EmployeeService } from '../employee.service';
 
 @Component({
@@ -7,13 +7,13 @@ import { EmployeeService } from '../employee.service';
   templateUrl: './employee-detail.component.html',
   styleUrls: ['./employee-detail.component.css']
 })
-export class EmployeeDetailComponent {
-  public employees : any[] = [];
+export class EmployeeDetailComponent implements OnInit, OnDestroy {
+  public employees: any[] = [];
   public errorMsg: any;
-  subscription: Subscription = new Subscription; 
+  intsubscription: Subscription = new Subscription;
 
 
-  constructor(private _employeeService : EmployeeService){}
+  constructor(private _employeeService: EmployeeService) { }
 
   // ngOnInit(){
   //   this.employees = this._employeeService.getEmployees();
@@ -24,15 +24,17 @@ export class EmployeeDetailComponent {
   //       .subscribe(data => this.employees = data);
   // }
 
-  ngOnInit(){
+  ngOnInit() {
     this._employeeService.getEmployees()
-        .subscribe(data => this.employees = data,
-                   error => this.errorMsg = error);
+      .subscribe(data => this.employees = data,
+        error => this.errorMsg = error);
 
-    this.subscription =  this._employeeService.getEmployees().subscribe(x => console.log(x));
+    this.intsubscription = interval(1000).subscribe(count => {
+      // console.log(count);
+    })
   }
 
   ngOnDestroy() {
-    this.subscription.unsubscribe()
+    this.intsubscription.unsubscribe()
   }
 }
