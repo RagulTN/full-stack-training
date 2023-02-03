@@ -20,6 +20,7 @@ import { EmployeeService } from './employee.service';
 import { QuoteShowComponent } from './quote-show/quote-show.component';
 
 import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
+import { FilterPipe } from './Pipes/filter.pipe';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
     DateTimeComponent,
     EmpListComponent,
     EmployeeDetailComponent,
-    QuoteShowComponent
+    QuoteShowComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,

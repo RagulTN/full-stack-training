@@ -13,6 +13,8 @@ export class QuoteShowComponent implements OnInit, OnDestroy {
   public quotes : any[] = [];
   public errorMsg: any;
 
+  filteredString:string = '';
+
   animation = 'pulse';
   contentLoaded = false;
   count = 2;
