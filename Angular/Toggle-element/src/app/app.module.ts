@@ -16,7 +16,11 @@ import { DatePipe } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { EmpListComponent } from './emp-list/emp-list.component';
 import { EmployeeDetailComponent } from './employee-detail/employee-detail.component';
+import { EmployeeService } from './employee.service';
+import { QuoteShowComponent } from './quote-show/quote-show.component';
 
+import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
+import { FilterPipe } from './Pipes/filter.pipe';
 
 @NgModule({
   declarations: [
@@ -24,7 +28,9 @@ import { EmployeeDetailComponent } from './employee-detail/employee-detail.compo
     TestComponent,
     DateTimeComponent,
     EmpListComponent,
-    EmployeeDetailComponent
+    EmployeeDetailComponent,
+    QuoteShowComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
@@ -36,9 +42,10 @@ import { EmployeeDetailComponent } from './employee-detail/employee-detail.compo
     MatButtonModule,
     MatNativeDateModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxSkeletonLoaderModule
   ],
-  providers: [DatePipe],
+  providers: [DatePipe, EmployeeService],
   bootstrap: [AppComponent]
 })
 
