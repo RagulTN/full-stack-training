@@ -1,5 +1,7 @@
 import { DatePipe } from '@angular/common';
 import { Component } from '@angular/core';
+import * as moment from 'moment';
+import 'moment-timezone';
 
 @Component({
   selector: 'app-date-time',
@@ -10,12 +12,15 @@ export class DateTimeComponent {
 
   date: Date | undefined;
   public res: Date | undefined
+  public tim: any;
   public dateSelected :any;
   public finalDate :any;
   public dated:any;
   public datef:any;
   public days=0;
   myDate = new Date(Date.now());
+  est: any;
+
 
   constructor(private datePipe: DatePipe){}
 
@@ -32,9 +37,18 @@ export class DateTimeComponent {
   }
 
   getDate(){
-    console.log(this.dateSelected);
+    this.est = this.dateSelected
+    console.log();
+    this.tim = moment(this.est).tz("Etc/GMT-2").format('lllll')
+    console.log("Date selected             : " + this.dateSelected);
+    console.log("EST Time Now              : " + this.tim);
+    var b = moment.tz(this.dateSelected, "America/Toronto").format();
+    console.log("America/Toronto Time Zone : " + b);
+    
     
   }
+
+
   cal(){
     this.dated = new Date(this.dateSelected).getTime();
 
