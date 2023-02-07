@@ -13,48 +13,46 @@ export class DateTimeComponent {
   date: Date | undefined;
   public res: Date | undefined
   public tim: any;
-  public dateSelected :any;
-  public finalDate :any;
-  public dated:any;
-  public datef:any;
-  public days=0;
+  public dateSelected: any;
+  public finalDate: any;
+  public dated: any;
+  public datef: any;
+  public days = 0;
   myDate = new Date(Date.now());
   est: any;
 
 
-  constructor(private datePipe: DatePipe){}
+  constructor(private datePipe: DatePipe) { }
 
   ngOnInit(): void {
     this.date = new Date();
-    this.date.setDate( this.date.getDate() + 3);
+    this.date.setDate(this.date.getDate() + 3);
     //new
-    this.dateSelected = this.datePipe.transform(this.myDate,'yyyy-MM-dd');
+    this.dateSelected = this.datePipe.transform(this.myDate, 'yyyy-MM-dd');
   }
 
-  dateChanged($event: { target: { value: any; }; }){
-    this.res = $event.target.value    
+  dateChanged($event: { target: { value: any; }; }) {
+    this.res = $event.target.value
     console.log(this.res);
   }
 
-  getDate(){
+  getDate() {
     this.est = this.dateSelected
     console.log();
-    this.tim = moment(this.est).tz("Etc/GMT-2").format('lllll')
+    this.tim = moment(this.est).tz("Etc/GMT-2").format('MM/DD/YY')
     console.log("Date selected             : " + this.dateSelected);
     console.log("EST Time Now              : " + this.tim);
     var b = moment.tz(this.dateSelected, "America/Toronto").format();
     console.log("America/Toronto Time Zone : " + b);
-    
-    
   }
 
 
-  cal(){
+  cal() {
     this.dated = new Date(this.dateSelected).getTime();
 
-    this.datef = this.dated + (this.days *(86400000));
+    this.datef = this.dated + (this.days * (86400000));
 
-    this.finalDate = this.datePipe.transform(this.datef,'yyyy-MM-dd' );
+    this.finalDate = this.datePipe.transform(this.datef, 'yyyy-MM-dd');
   }
 }
 
