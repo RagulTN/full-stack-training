@@ -9,7 +9,6 @@ export class FilterPipe implements PipeTransform {
     if(value.length === 0){
       return value;
     }
-
     const authors = [];
     for(const quotes of value){
       if(quotes['author'] === filteredString){
