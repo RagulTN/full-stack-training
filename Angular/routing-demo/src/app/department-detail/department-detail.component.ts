@@ -33,6 +33,12 @@ export class DepartmentDetailComponent {
     // this.router.navigate(['/departments', {id: selectedId , name: 'depname'}]);      //doesnt need a placeholder
     this.router.navigate(['../', {id: selectedId}],{relativeTo: this.route});
   }
+  showOverview(){
+    this.router.navigate(['overview'], {relativeTo:this.route});
+  }
+  showContact(){
+    this.router.navigate(['contact'], {relativeTo:this.route});
+  }
 }
 
 //you need activatedRoute for components thats being routed
