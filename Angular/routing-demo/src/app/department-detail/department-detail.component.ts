@@ -13,6 +13,7 @@ export class DepartmentDetailComponent {
   ngOnInit(){
     // let id = parseInt(this.route.snapshot.paramMap.get('id') as any);
     // this.departmentId = id;
+    console.log(this.route);
     this.route.paramMap.subscribe((params: ParamMap) =>{
       let id = parseInt(params.get('id') as any);
       this.departmentId = id;
@@ -27,7 +28,18 @@ export class DepartmentDetailComponent {
     let previousId = this.departmentId + 1;
     this.router.navigate(['/departments', previousId]);
   }
+  gotoDepartments(){
+    let selectedId = this.departmentId ? this.departmentId : null  //so selected id is current department id
+    // this.router.navigate(['/departments', {id: selectedId , name: 'depname'}]);      //doesnt need a placeholder
+    this.router.navigate(['../', {id: selectedId}],{relativeTo: this.route});
+  }
 }
 
 //you need activatedRoute for components thats being routed
 //you need router for navigate data one to another
+
+//topics covered
+//1. routing and navigation
+//2. wildcard navigation
+//3. route parameters
+//4. para

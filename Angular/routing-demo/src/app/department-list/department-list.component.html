@@ -1,6 +1,10 @@
 <p>List of all departments</p>
 <ul class="items">
-    <li (click)="onSelect(department)" *ngFor="let department of departments">
+    <li (click)="onSelect(department)" [class.selected] = "isSelected(department)" *ngFor="let department of departments">
         <span class="badge">{{department.id}}</span> {{department.name}}
     </li>
 </ul>
+
+<!-- 
+[class.selected] = "isSelected(department)" -> class binding
+bind a class named selected and apply that class if function passed -->
