@@ -1,0 +1,13 @@
+<p>you selected department with id = {{departmentId}}</p>
+<nav>
+    <a (click)="goPrevious()">Previous</a>
+    <a (click)="goNext()">Next</a>
+</nav>
+<nav>
+    <a (click)="showOverview()">Overview</a>
+    <a (click)="showContact()">Contact</a>
+</nav>
+<router-outlet></router-outlet>
+<div>
+    <button (click)="gotoDepartments()">Back</button>
+</div>
