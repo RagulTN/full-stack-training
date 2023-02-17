@@ -20,7 +20,7 @@ export class AppComponent {
     }
   }
 
-  userModel = new User('', 'ragul@gmail1212.com', 123443, '', 'morning', true );  //sending data to view
+  userModel = new User('ragul', 'ragul@gmail1212.com', 1234567890, '', 'morning', true );  //sending data to view
 }
 
 // #name="ngModel" -> name (template ref varible) is ngmodel for that input Element

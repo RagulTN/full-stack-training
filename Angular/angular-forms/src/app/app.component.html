@@ -1,6 +1,6 @@
 <div class="container-fluid">
   <h1>Job Application</h1>
-  <form #userForm="ngForm">
+  <form #userForm="ngForm" novalidate>
 
     <!-- {{userForm.value | json}}
     <hr />
@@ -21,6 +21,8 @@
       </div>
     </div>
     ngModel,ngForm,ngGroup -->
+
+    {{userForm.form.valid}}
 
     <div class="form-group">
       <label>Name</label>
@@ -72,5 +74,5 @@
       </label>
     </div>
 
-    <button class="btn btn-primary" type="submit">Submit</button>
+    <button [disabled]="userForm.form.invalid || topicHasError " class="btn btn-primary" type="submit">Submit</button>
 
