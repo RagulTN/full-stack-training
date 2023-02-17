@@ -20,6 +20,11 @@ export class AppComponent {
     }
   }
 
+  onSubmit(){
+    console.log(this.userModel);
+    
+  }
+
   userModel = new User('ragul', 'ragul@gmail1212.com', 1234567890, '', 'morning', true );  //sending data to view
 }
 
