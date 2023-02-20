@@ -13,6 +13,7 @@ h1 {
   body { 
     margin: 2em; 
   }
+  
   body, input[text], button { 
     color: #888; 
     font-family: Cambria, Georgia; 
@@ -21,6 +22,7 @@ h1 {
     cursor: pointer;
     cursor: hand;
   }
+
   button {
     font-family: Arial;
     background-color: #eee;
@@ -30,9 +32,11 @@ h1 {
     cursor: pointer;
     cursor: hand;
   }
+
   button:hover {
     background-color: #cfd8dc;
   }
+
   button:disabled {
     background-color: #eee;
     color: #aaa; 
@@ -68,6 +72,7 @@ h1 {
     padding-left: 0;
     width: 10em;
   }
+
   .items li {
     cursor: pointer;
     position: relative;
@@ -78,11 +83,13 @@ h1 {
     height: 1.6em;
     border-radius: 4px;
   }
+
   .items li:hover {
     color: #607D8B;
     background-color: #DDD;
     left: .1em;
   }
+
   .items li.selected:hover {
     background-color: #BBD8DC;
     color: white;
