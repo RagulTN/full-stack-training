@@ -11,6 +11,8 @@ export class AppComponent {
   title = 'angular-forms';
   topics = ['full-stack', 'front-end', 'back-end'];
   topicHasError = true;
+  submitted = false;
+  errorMsg = '';
 
   constructor(private _applicationservice: ApplicationService){}
 
@@ -24,10 +26,11 @@ export class AppComponent {
   }
 
   onSubmit(){
+    this.submitted = true;
     console.log(this.userModel);
     this._applicationservice.apply(this.userModel).subscribe(
       data => console.log("sucess!", data),
-      error => console.log("error!", error)
+      error => this.errorMsg = error.statusText
     )
   }
 
