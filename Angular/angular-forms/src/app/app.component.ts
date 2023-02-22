@@ -25,7 +25,8 @@ export class AppComponent {
     }
   }
 
-  onSubmit(){
+  onSubmit(userForm : any){
+    console.log(userForm.value);
     this.submitted = true;
     console.log(this.userModel);
     this._applicationservice.apply(this.userModel).subscribe(

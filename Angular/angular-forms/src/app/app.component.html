@@ -4,7 +4,7 @@
     {{errorMsg}}
   </div>
 
-  <form #userForm="ngForm" *ngIf="!submitted" (ngSubmit)="onSubmit()" novalidate>
+  <form #userForm="ngForm" *ngIf="!submitted" (ngSubmit)="onSubmit(userForm)" novalidate>
 
     <!-- {{userForm.value | json}}
     <hr />
