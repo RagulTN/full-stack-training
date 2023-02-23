@@ -4,7 +4,7 @@
     {{errorMsg}}
   </div>
 
-  <form #userForm="ngForm" *ngIf="!submitted" (ngSubmit)="onSubmit(userForm)" novalidate>
+  <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm)" novalidate>
 
     <!-- {{userForm.value | json}}
     <hr />
@@ -44,14 +44,19 @@
     <div class="form-group">
       <label>Phone</label>
       <input type="tel" #phone="ngModel" pattern="^\d{10}$" [class.is-invalid]="phone.invalid && phone.touched" class="form-control" name="phone" [(ngModel)]="userModel.phone">
-      <!-- <small class="text-danger" [class.d-none]="phone.valid || phone.untouched">Phone number is required and must be ten digits</small> -->
-      <div *ngIf="phone.errors && (phone.invalid || phone.touched)">
-        <small class="text-danger" *ngIf="phone?.errors?.['required']">Phone number is required</small>      
-        <small class="text-danger" *ngIf="phone?.errors?.['pattern']">Phone number must be 10 digits</small>      
-      </div>
    </div>
 
    <div class="form-group">
+    <label>Phone1</label>
+    <input type="tel" #phone1="ngModel" pattern="^\d{10}$" class="form-control" name="phone1" [(ngModel)]="userModel.phone1">
+ </div>
+
+ <div class="form-group">
+  <label>Phone2</label>
+  <input type="tel" #phone2="ngModel" pattern="^\d{10}$" class="form-control" name="phone2" [(ngModel)]="userModel.phone2">
+</div>
+
+   <!-- <div class="form-group">
     <select class="custom-select" (blur)="validateTopic(topic.value)" (change)="validateTopic(topic.value)" #topic="ngModel" [class.is-invalid]="topicHasError && topic.touched" name="topic" [(ngModel)]="userModel.topic">
       <option value="default">I am interested in</option>
       <option *ngFor="let topic of topics">{{ topic }}</option>
@@ -76,8 +81,8 @@
       <label class="form-check-label">
         Subscribe to email listing
       </label>
-    </div>
+    </div> -->
 
-    <button [disabled]="userForm.form.invalid || topicHasError " class="btn btn-primary" type="submit">Submit</button>
+    <button class="btn btn-primary mt-3" type="submit">Submit</button>
   </form>
 <div *ngIf="submitted && errorMsg ==='' ">Form submitted, check your console</div>
