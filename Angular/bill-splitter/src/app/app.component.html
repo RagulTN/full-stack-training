@@ -3,8 +3,11 @@
 
 <div class="col-md-6 offset-md-3 mt-5">
      <br>
-     <h1>Bill Splitter</h1>
+     <!-- <h1>Bill Splitter</h1> -->
      <form #userForm="ngForm" (ngSubmit)="splitBill(userForm.value)">
+      <a>
+        <img src='../assets/logobill1.png'>
+      </a>
         <div class="form-group">
             <label>Id</label>
             <input type="number" ngModel name="tripId" class="form-control"placeholder="1">
@@ -30,7 +33,7 @@
      </form>
      <hr>
      <br>
-     <button type="submit" class="btn btn-secondary" (click)="getSplits()" ><i class="bi bi-clock-history"></i>History</button>
+     <button type="submit" class="btn btn-secondary" (click)="getSplits()" ><i class="fa fa-history"></i>⠀History</button>
      <button type="submit" class="btn btn-secondary" (click)="getLastTransaction()">Get Last Split</button>
      
      <h1>Result</h1>
@@ -91,4 +94,12 @@
  <br>
  <br>
  <br>
+
+
+ <p-dialog header="Alert" [(visible)]="displayBasic" [style]="{width: '50vw'}" [baseZIndex]="10000">
+  <p>Data Sent Sucessfully.</p>
+  <ng-template pTemplate="footer">
+      <p-button icon="pi pi-check" (click)="displayBasic=false && getLastTransaction()" label="Ok" styleClass="p-button-text"></p-button>
+  </ng-template>
+</p-dialog>
  

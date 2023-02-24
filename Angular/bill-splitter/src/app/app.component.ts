@@ -1,6 +1,7 @@
 import { HttpClient, HttpClientModule, HttpErrorResponse } from '@angular/common/http';
-import { Component } from '@angular/core';
-
+import { Component, ViewChild } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { PrimeNGConfig } from 'primeng/api';
 
 @Component({
   selector: 'app-root',
@@ -20,20 +21,27 @@ export class AppComponent {
 
   persons1: number = 0;
   pers: number[] = [];
+  displayBasic: boolean = false;
 
-  generateDivs(data: any) {
-
-    const n =data.amount/data.persons;
-    data.splitamount = n;
-    console.log(this.splitAmt);
-
-    for(var i=0;i<data.persons;i++)
-    {
-    this.splitAmt.push(n)    
-    }
-    this.splitAmt = Array(this.persons1).fill(0).map((i) => i);
-
+  showBasicDialog(){
+    this.displayBasic = true;
   }
+
+  @ViewChild('userForm') form: NgForm;
+
+  // generateDivs(data: any) {
+
+  //   const n =data.amount/data.persons;
+  //   data.splitamount = n;
+  //   console.log(this.splitAmt);
+
+  //   for(var i=0;i<data.persons;i++)
+  //   {
+  //   this.splitAmt.push(n)    
+  //   }
+  //   this.splitAmt = Array(this.persons1).fill(0).map((i) => i);
+
+  // }
 
 
 
@@ -87,11 +95,14 @@ export class AppComponent {
       body: JSON.stringify(data)
     }).then(res => {
       if (res.ok) {
-        alert("Data sent successfully");
+        this.showBasicDialog();
+        this.getLastTransaction();
+        this.form.reset();
         return res.json();
       }
       else{
         alert("Oops...Data not Sent");
       }
-    })}
+    })
+  }
 }
