@@ -34,10 +34,14 @@
      <hr>
      <br>
      <button type="submit" class="btn btn-secondary" (click)="getSplits()" ><i class="fa fa-history"></i>⠀History</button>
+
      <button type="submit" class="btn btn-secondary" (click)="getLastTransaction()">Get Last Split</button>
      
      <h1>Result</h1>
 
+     <div *ngIf="spinnerShow">
+      <p-progressSpinner  [style]="{width: '50px', height: '50px'}" styleClass="custom-spinner" strokeWidth="8" fill="#EEEEEE" animationDuration=".5s"></p-progressSpinner>
+    </div>
      
      <ul *ngFor="let a of last ; let last = last">
       <div *ngIf="last && !contentLoaded1">

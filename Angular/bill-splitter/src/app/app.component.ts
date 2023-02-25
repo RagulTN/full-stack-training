@@ -1,7 +1,6 @@
 import { HttpClient, HttpClientModule, HttpErrorResponse } from '@angular/common/http';
 import { Component, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { PrimeNGConfig } from 'primeng/api';
 
 @Component({
   selector: 'app-root',
@@ -15,6 +14,7 @@ export class AppComponent {
   last: any  = [];
   contentLoaded = false;
   contentLoaded1= false;
+  spinnerShow = false;
   n: any;
   errorMsg: any = '';
   splitAmt:any =[];
@@ -47,8 +47,11 @@ export class AppComponent {
 
   constructor(private http: HttpClient){}
 
+  showSpinner(){
+    this.spinnerShow = true;
+  }
+
   getSplits(){
-      
     setTimeout(() => {
       this.contentLoaded = true;
     }, 1000);
@@ -82,6 +85,8 @@ export class AppComponent {
     data.splitamount = n;
     console.log(this.splitAmt);
 
+    this.showSpinner();
+
     for(var i=0;i<data.persons;i++)
     {
     this.splitAmt.push(n)  
@@ -95,6 +100,7 @@ export class AppComponent {
       body: JSON.stringify(data)
     }).then(res => {
       if (res.ok) {
+        this.spinnerShow = false;
         this.showBasicDialog();
         this.getLastTransaction();
         this.form.reset();

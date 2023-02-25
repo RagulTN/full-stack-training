@@ -13,6 +13,9 @@ import { CardModule } from 'primeng/card';
 import { DialogModule } from 'primeng/dialog';
 import { ButtonModule } from 'primeng/button';
 
+import {ProgressSpinnerModule} from 'primeng/progressspinner';
+
+
 
 @NgModule({
   declarations: [
@@ -27,7 +30,8 @@ import { ButtonModule } from 'primeng/button';
     BrowserAnimationsModule,
     CardModule,
     DialogModule,
-    ButtonModule
+    ButtonModule,
+    ProgressSpinnerModule
     
   ],
   providers: [],
