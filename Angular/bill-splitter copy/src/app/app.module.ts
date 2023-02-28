@@ -31,7 +31,7 @@ import {ProgressSpinnerModule} from 'primeng/progressspinner';
     CardModule,
     DialogModule,
     ButtonModule,
-    ProgressSpinnerModule,
+    ProgressSpinnerModule
     
   ],
   providers: [],
