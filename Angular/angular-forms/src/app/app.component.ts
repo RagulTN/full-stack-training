@@ -11,6 +11,9 @@ export class AppComponent {
   title = 'angular-forms';
   topics = ['full-stack', 'front-end', 'back-end'];
   topicHasError = true;
+  submitted = false;
+  errorMsg = '';
+  shares: number = 0;
 
   constructor(private _applicationservice: ApplicationService){}
 
@@ -23,15 +26,23 @@ export class AppComponent {
     }
   }
 
-  onSubmit(){
+  onSubmit(userForm : any){
+    console.log(userForm.value);
+    console.log(this.userModel.phone)
+    this.submitted = true;
     console.log(this.userModel);
     this._applicationservice.apply(this.userModel).subscribe(
       data => console.log("sucess!", data),
-      error => console.log("error!", error)
+      error => this.errorMsg = error.statusText
     )
+
+    this.shares = this.userModel.phone + this.userModel.phone1 + this.userModel.phone2
+    console.log(this.shares);
+    
+
   }
 
-  userModel = new User('ragul', 'ragul@gmail1212.com', 1234567890, '', 'morning', true );  //sending data to view
+  userModel = new User('ragul', 'ragul@gmail1212.com', 12,12,12, '', 'morning', true );  //sending data to view
 }
 
 // #name="ngModel" -> name (template ref varible) is ngmodel for that input Element

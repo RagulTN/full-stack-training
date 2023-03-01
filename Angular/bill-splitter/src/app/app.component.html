@@ -1,0 +1,109 @@
+
+
+
+<div class="col-md-6 offset-md-3 mt-5">
+     <br>
+     <!-- <h1>Bill Splitter</h1> -->
+     <form #userForm="ngForm" (ngSubmit)="splitBill(userForm.value)">
+      <a>
+        <img src='../assets/logobill1.png'>
+      </a>
+        <div class="form-group">
+            <label>Id</label>
+            <input type="number" ngModel name="tripId" class="form-control"placeholder="1">
+          </div>
+       <div class="form-group">
+         <label>Name</label>
+         <input type="text" #name="ngModel" ngModel name="name" class="form-control" [class.is-invalid]="name.invalid && name.touched" id="name" placeholder="Enter your name and surname" required="required">
+         <small class="text-danger" [class.d-none]="name.valid || name.untouched">Name is required</small>
+       </div>
+       <div class="form-group">
+        <label>Total Amount</label>
+        <input type="number" #amount="ngModel" required ngModel name="amount" class="form-control"placeholder="5000" required="required">
+        <small class="text-danger" [class.d-none]="amount.valid || amount.untouched">Amount is required</small>
+      </div>
+      <div class="form-group">
+        <label>Total Persons to split</label>
+        <input type="number" #persons="ngModel" required ngModel name="persons" class="form-control" placeholder="3" required="required">
+        <small class="text-danger" [class.d-none]="persons.valid || persons.untouched">Persons is required</small>
+
+      </div>
+       <br>
+       <button type="submit" [disabled]="userForm.form.invalid" class="btn btn-primary" >Split Bill</button>
+     </form>
+     <hr>
+     <br>
+     <button type="submit" class="btn btn-secondary" (click)="getSplits()" ><i class="fa fa-history"></i>⠀History</button>
+
+     <button type="submit" class="btn btn-secondary" (click)="getLastTransaction()">Get Last Split</button>
+     
+     <h1>Result</h1>
+
+     <div *ngIf="spinnerShow">
+      <p-progressSpinner  [style]="{width: '50px', height: '50px'}" styleClass="custom-spinner" strokeWidth="8" fill="#EEEEEE" animationDuration=".5s"></p-progressSpinner>
+    </div>
+     
+     <ul *ngFor="let a of last ; let last = last">
+      <div *ngIf="last && !contentLoaded1">
+        <div class="p-grid p-formgrid">
+          <div class="p-field p-col-12 p-md-6">
+            <p-skeleton width="30rem" styleClass="p-mb-1"></p-skeleton><br>
+            <p-skeleton width="30rem" styleClass="p-mb-1"></p-skeleton>
+          </div>
+        </div>
+      </div>
+      <div *ngIf="last && contentLoaded1">
+        <h3>Your Last Split</h3>
+        Name : {{a.name}}<br>
+        amount: {{a.amount}}<br>
+        persons :  {{a.persons}}<br>
+        <hr>
+        <h3  style="color: rgb(206, 141, 21);font-size: larger;">Split amount      :   {{a.splitamount | number : '1.0-0'}}</h3><br>
+        <h3  style="color: black;font-size: larger;">For person you need to give</h3>
+        <h3  style="color: black;font-size: large;">For Food      :   {{a.splitamount/2 | number : '1.0-0'}}</h3>
+        <h3  style="color: black;font-size: large;">For Travel    :   {{a.splitamount/2 | number : '1.0-0'}}</h3>
+       <!-- <div *ngFor="let div of pers;let last;let i as index" class="box">
+        <div *ngIf="last" >
+          {{ div }}</div></div> -->
+      </div>
+     </ul>
+
+     <div>
+      {{errorMsg}}
+     </div>
+     <div class="datas" *ngFor="let a of res ; let first = first">
+      <div *ngIf="first">
+        <h3>Your History</h3>
+      </div>
+      <div *ngIf="first && !contentLoaded">
+        <div class="p-grid p-formgrid">
+          <div class="p-field p-col-12 p-md-6">
+            <p-skeleton width="30rem" styleClass="p-mb-1"></p-skeleton><br>
+            <p-skeleton width="28rem" styleClass="p-mb-1"></p-skeleton><br>
+            <p-skeleton width="30rem" styleClass="p-mb-1"></p-skeleton><br>
+            <p-skeleton width="28rem" styleClass="p-mb-1"></p-skeleton><br>
+          </div>
+        </div>
+      </div>
+      <div *ngIf="contentLoaded" >
+        Name : {{a.name}}<br>
+        amount: {{a.amount}}<br>
+        persons :  {{a.persons}}<br>
+        Split amount:   {{a.splitamount}}<br>
+        <hr>
+      </div>
+     </div>
+
+ </div> 
+ <br>
+ <br>
+ <br>
+
+
+ <p-dialog header="Alert" [(visible)]="displayBasic" [style]="{width: '50vw'}" [baseZIndex]="10000">
+  <p>Data Sent Sucessfully.</p>
+  <ng-template pTemplate="footer">
+      <p-button icon="pi pi-check" (click)="displayBasic=false && getLastTransaction()" label="Ok" styleClass="p-button-text"></p-button>
+  </ng-template>
+</p-dialog>
+ 

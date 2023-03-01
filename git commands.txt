@@ -18,3 +18,13 @@ git remote -v
 install angular ->        npm install -g @angular/cli
 creating new projrcts ->  ng new <project-name>
 new component -> ng g c newComponent
+
+---npm commands---
+
+npm init --yes
+npm install --save express -body-parser cors
+// body parser is a middle ware to handle form data
+// cors is a package to make requests among different ports
+
+npm install firebase @angular/fire --save
+ng add @angular/fire
