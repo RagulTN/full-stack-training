@@ -14,6 +14,9 @@ import { DialogModule } from 'primeng/dialog';
 import { ButtonModule } from 'primeng/button';
 
 import {ProgressSpinnerModule} from 'primeng/progressspinner';
+import {ToastModule} from 'primeng/toast';
+import {RippleModule} from 'primeng/ripple';
+
 
 
 
@@ -32,6 +35,7 @@ import {ProgressSpinnerModule} from 'primeng/progressspinner';
     DialogModule,
     ButtonModule,
     ProgressSpinnerModule,
+    ToastModule
     
   ],
   providers: [],
