@@ -1,15 +1,19 @@
 import { HttpClient, HttpClientModule, HttpErrorResponse } from '@angular/common/http';
 import { Component, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import {MessageService} from 'primeng/api';
+import { PrimeNGConfig } from 'primeng/api';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  providers: [MessageService]
+
 })
 export class AppComponent {
   title = 'bill-splitter';
-  url = 'https://63f70208833c7c9c607b0d4a.mockapi.io/billsplit/bills'
+  url = 'https://63f70208833c7c9c607b0d4a.mockapi.io/billsplit/bills121'
   res: any  = [];
   last: any  = [];
   contentLoaded = false;
@@ -25,6 +29,14 @@ export class AppComponent {
 
   showBasicDialog(){
     this.displayBasic = true;
+  }
+
+  ngOnInit() {
+    this.primengConfig.ripple = true;
+  }
+
+  showSuccess() {
+      this.messageService.add({severity:'success', summary: 'Success', detail: 'Data sent successfully'});
   }
 
   @ViewChild('userForm') form: NgForm;
@@ -45,7 +57,7 @@ export class AppComponent {
 
 
 
-  constructor(private http: HttpClient){}
+  constructor(private http: HttpClient,private messageService: MessageService, private primengConfig: PrimeNGConfig){}
 
   showSpinner(){
     this.spinnerShow = true;
@@ -74,7 +86,7 @@ export class AppComponent {
       .subscribe((last) => {
         this.last = last;
       },(error:any)=>{
-        this.errorMsg = "Aww...404 Url Not Found :(";
+        this.showBasicDialog();
         this.contentLoaded = false;
       })
   }
@@ -101,14 +113,15 @@ export class AppComponent {
     }).then(res => {
       if (res.ok) {
         this.spinnerShow = false;
-        this.showBasicDialog();
+        this.showSuccess();
         this.getLastTransaction();
         this.form.reset();
         return res.json();
       }
       else{
-        alert("Oops...Data not Sent");
+        this.showBasicDialog();
       }
     })
   }
+
 }
