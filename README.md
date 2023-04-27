@@ -8,7 +8,7 @@ Topics covered
 2. CSS, SCSS
 3. Bootstrap
 5. [Javascript](https://github.com/RagulSid/full-stack-training/tree/main/Javascript)
-6. Angular - routing, forms, API calls, services
+6. Angular - routing, forms, API calls
 
 # Backend
 Topics covered
